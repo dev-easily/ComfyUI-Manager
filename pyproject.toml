@@ -6,7 +6,7 @@ license = { file = "LICENSE.txt" }
 dependencies = ["GitPython", "PyGithub", "matrix-client==0.4.0", "transformers", "huggingface-hub>0.20", "typer", "rich", "typing-extensions", "toml", "uv", "chardet"]
 
 [project.urls]
-Repository = "https://github.com/ltdrdata/ComfyUI-Manager"
+Repository = "https://github.com/dev-easily/ComfyUI-Manager"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]

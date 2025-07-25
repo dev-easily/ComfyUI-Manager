@@ -230,6 +230,7 @@ var switch_comfyui_button = null;
 var update_all_button = null;
 var restart_stop_button = null;
 var update_policy_combo = null;
+var reinstall_all_deps_button = null;
 
 let share_option = 'all';
 var is_updating = false;
@@ -789,6 +790,18 @@ async function updateAll(update_comfyui) {
 	}
 }
 
+async function reinstallAllCustomNodesDeps() {
+	showTerminal();
+	const response = await api.fetchApi('/manager/queue/fix_all');
+	if(response.status == 200) {
+		infoToast('Begin to reinstall all custom nodes deps.');
+		await api.fetchApi('/manager/queue/start');
+	}
+	else {
+		customAlert('Failed to reinstall all custom nodes deps.');
+	}
+}
+
 function newDOMTokenList(initialTokens) {
 	const tmp = document.createElement(`div`);
 
@@ -873,6 +886,13 @@ class ManagerMenuDialog extends ComfyDialog {
 				});
 		}
 
+		reinstall_all_deps_button =
+            $el("button.cm-button", {
+                type: "button",
+                textContent: "Reinstall All Custom Nodes Deps",
+                onclick: () => reinstallAllCustomNodesDeps()
+            });
+
 		const res =
 			[
 				$el("button.cm-button", {
@@ -941,6 +961,7 @@ class ManagerMenuDialog extends ComfyDialog {
 				update_comfyui_button,
 				switch_comfyui_button,
 				// fetch_updates_button,
+				reinstall_all_deps_button,
 
 				$el("br", {}, []),
 				restart_stop_button,

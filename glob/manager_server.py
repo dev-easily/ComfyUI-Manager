@@ -545,6 +545,15 @@ async def task_worker():
 
         return f"Failed to disable: '{node_name}'"
 
+
+    async def do_fix_all() -> str:
+        try:
+            core.unified_manager.fix_all()
+            return "success"
+        except Exception:
+            traceback.print_exc()
+            return "An error occurred while fixing all custom nodes."
+
     async def do_install_model(item) -> str:
         ui_id, json_data = item
 
@@ -632,6 +641,8 @@ async def task_worker():
                 msg = await do_uninstall(item)
             elif kind == 'disable':
                 msg = await do_disable(item)
+            elif kind == 'fix_all':
+                msg = await do_fix_all()
             else:
                 msg = "Unexpected kind: " + kind
         except Exception:
@@ -727,6 +738,11 @@ async def fetch_updates(request):
         traceback.print_exc()
         return web.Response(status=400)
 
+
+@routes.get("/manager/queue/fix_all")
+async def fix_all_custom_nodes(request):
+    task_queue.put(("fix_all", "fix_all"))
+    return web.Response(status=200, text="start")
 
 @routes.get("/manager/queue/update_all")
 async def update_all(request):
@@ -1773,5 +1789,3 @@ cm_global.register_extension('ComfyUI-Manager',
                                  'name': 'ComfyUI Manager',
                                  'nodes': {},
                                  'description': 'This extension provides the ability to manage custom nodes in ComfyUI.', })
-
-

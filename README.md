@@ -1,15 +1,17 @@
 # ComfyUI Manager
 
+This repo adds an experimental feature————Reinstall All Custom Nodes Deps.
+
+Usage:
+1. Open Manager in ComfyUI
+2. Click Reinstall All Custom Nodes Deps
+3. A `install-scripts.txt` will be generated under ${user_directory}`/default/ComfyUI-Manager/startup-scripts` directory (user_directory should )
+4. Close ComfyUI and restart
+5. Check log in terminal
+
 **ComfyUI-Manager** is an extension designed to enhance the usability of [ComfyUI](https://github.com/comfyanonymous/ComfyUI). It offers management functions to **install, remove, disable, and enable** various custom nodes of ComfyUI. Furthermore, this extension provides a hub feature and convenience functions to access a wide range of information within ComfyUI.
 
 ![menu](https://raw.githubusercontent.com/ltdrdata/ComfyUI-extension-tutorials/refs/heads/Main/ComfyUI-Manager/images/dialog.jpg)
-
-## NOTICE
-* V3.16: Support for `uv` has been added. Set `use_uv` in `config.ini`.
-* V3.10: `double-click feature` is removed
-  * This feature has been moved to https://github.com/ltdrdata/comfyui-connection-helper
-* V3.3.2: Overhauled. Officially supports [https://registry.comfy.org/](https://registry.comfy.org/).
-* You can see whole nodes info on [ComfyUI Nodes Info](https://ltdrdata.github.io/) page.
 
 ## Installation
 
@@ -18,7 +20,7 @@
 To install ComfyUI-Manager in addition to an existing installation of ComfyUI, you can follow the following steps:
 
 1. goto `ComfyUI/custom_nodes` dir in terminal(cmd)
-2. `git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager`
+2. `git clone https://github.com/dev-easily/ComfyUI-Manager`
 3. Restart ComfyUI
 
 
@@ -27,7 +29,7 @@ To install ComfyUI-Manager in addition to an existing installation of ComfyUI, y
 - https://git-scm.com/download/win
 - standalone version  
 - select option: use windows default console window
-2. Download [scripts/install-manager-for-portable-version.bat](https://github.com/ltdrdata/ComfyUI-Manager/raw/main/scripts/install-manager-for-portable-version.bat) into installed `"ComfyUI_windows_portable"` directory
+2. Download [scripts/install-manager-for-portable-version.bat](https://github.com/dev-easily/ComfyUI-Manager/raw/main/scripts/install-manager-for-portable-version.bat) into installed `"ComfyUI_windows_portable"` directory
 - Don't click. Right click the link and use save as...
 3. double click `install-manager-for-portable-version.bat` batch file
 
@@ -62,15 +64,13 @@ comfy install
 To install ComfyUI with ComfyUI-Manager on Linux using a venv environment, you can follow these steps:
 * **prerequisite: python-is-python3, python3-venv, git**
 
-1. Download [scripts/install-comfyui-venv-linux.sh](https://github.com/ltdrdata/ComfyUI-Manager/raw/main/scripts/install-comfyui-venv-linux.sh) into empty install directory
+1. Download [scripts/install-comfyui-venv-linux.sh](https://github.com/dev-easily/ComfyUI-Manager/raw/main/scripts/install-comfyui-venv-linux.sh) into empty install directory
 - Don't click. Right click the link and use save as...
 - ComfyUI will be installed in the subdirectory of the specified directory, and the directory will contain the generated executable script.
 2. `chmod +x install-comfyui-venv-linux.sh`
 3. `./install-comfyui-venv-linux.sh`
 
 ### Installation Precautions
-* **DO**: `ComfyUI-Manager` files must be accurately located in the path `ComfyUI/custom_nodes/comfyui-manager`
-  * Installing in a compressed file format is not recommended.
 * **DON'T**: Decompress directly into the `ComfyUI/custom_nodes` location, resulting in the Manager contents like `__init__.py` being placed directly in that directory.
   * You have to remove all ComfyUI-Manager files from `ComfyUI/custom_nodes`
 * **DON'T**: In a form where decompression occurs in a path such as `ComfyUI/custom_nodes/ComfyUI-Manager/ComfyUI-Manager`.
@@ -252,7 +252,7 @@ The following settings are applied based on the section marked as `is_default`.
 # Config
 * You can modify the `config.ini` file to apply the settings for ComfyUI-Manager.
     * The path to the `config.ini` used by ComfyUI-Manager is displayed in the startup log messages.
-    * See also: [https://github.com/ltdrdata/ComfyUI-Manager#paths]
+    * See also: [https://github.com/dev-easily/ComfyUI-Manager#paths]
 * Configuration options:
     ```
     [default]

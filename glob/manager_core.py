@@ -1550,6 +1550,22 @@ class UnifiedManager:
 
         return res
 
+    def fix_all(self):
+        logging.info("[ComfyUI-Manager] Start batch fix of all custom nodes...")
+        logging.info(f"[ComfyUI-Manager] Active nodes: {self.active_nodes}")
+        logging.info(f"[ComfyUI-Manager] Unknown active nodes: {self.unknown_active_nodes}")
+        logging.info(f"[ComfyUI-Manager] Nightly active nodes: {self.active_nodes}")
+        logging.info(f"[ComfyUI-Manager] Disabled nodes: {self.disabled_nodes}")
+        logging.info(f"[ComfyUI-Manager] Disabled nightly nodes: {self.nightly_inactive_nodes}")
+        logging.info(f"[ComfyUI-Manager] Disabled cnr nodes: {self.cnr_inactive_nodes}")
+        logging.info(f"[ComfyUI-Manager] Disabled unknown nodes: {self.unknown_inactive_nodes}")
+        logging.info(f"[ComfyUI-Manager] Disabled cnr nodes: {self.cnr_inactive_nodes}")
+
+        for node_id, info in self.active_nodes.items():
+            version_spec = info[0]
+            print(f"[ComfyUI-Manager] Fixing node: {node_id}@{version_spec}")
+            self.unified_fix(node_id, version_spec)
+
 
 unified_manager = UnifiedManager()
 
