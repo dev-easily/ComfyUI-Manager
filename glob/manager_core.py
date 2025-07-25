@@ -848,7 +848,7 @@ class UnifiedManager:
                 return {}
 
         # validate channel - only the channel set by the user is allowed.
-        if channel_url not in valid_ch annels:
+        if channel_url not in valid_channels:
             logging.error(f'[ComfyUI-Manager] An invalid channel was used: {channel_url}')
             raise InvalidChannel(channel_url)
 

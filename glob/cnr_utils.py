@@ -40,14 +40,11 @@ base_url = "https://api.comfy.org"
 if USE_GITEE_CNR_DATA:
     base_url = "https://gitee.com/easy-win/ComfyUI-Manager/raw/main/.ci/comfy"
 
-
 lock = asyncio.Lock()
 
 is_cache_loading = False
 
 async def get_cnr_data(cache_mode=True, dont_wait=True):
-    if USE_GITEE_CNR_DATA:
-        return await get_cnr_data_from_gitee()
     try:
         return await _get_cnr_data(cache_mode, dont_wait)
     except asyncio.TimeoutError:
@@ -57,7 +54,6 @@ async def get_cnr_data(cache_mode=True, dont_wait=True):
 async def _get_cnr_data(cache_mode=True, dont_wait=True):
     global is_cache_loading
 
-    uri = f'{base_url}/nodes'
     form_factor = detect_form_factor()
     is_desktop = bool(os.environ.get('__COMFYUI_DESKTOP_VERSION__'))
     if is_desktop:
@@ -65,72 +61,69 @@ async def _get_cnr_data(cache_mode=True, dont_wait=True):
     else:
         comfyui_ver = manager_core.get_comfyui_tag() or 'unknown'
 
-
-    async def fetch_all_from_gitee():
-        # url = f"{base_url}/{comfyui_ver}/nodes-{form_factor}.json" not supported now
-        url = f"{base_url}/nodes-{form_factor}.json"
-        resp = requests.get(url, timeout=10)
-        resp.raise_for_status()
-        data = resp.json()
-        return data
-
-    async def fetch_all():
-        remained = True
-        page = 1
-
-        full_nodes = {}
-
-        # Get ComfyUI version tag
-        while remained:
-            # Add comfyui_version and form_factor to the API request
-            sub_uri = f'{base_url}/nodes?page={page}&limit=30&comfyui_version={comfyui_ver}&form_factor={form_factor}'
-            sub_json_obj = await asyncio.wait_for(manager_util.get_data_with_cache(sub_uri, cache_mode=False, silent=True, dont_cache=True), timeout=30)
-            remained = page < sub_json_obj['totalPages']
-
-            for x in sub_json_obj['nodes']:
-                full_nodes[x['id']] = x
-
-            if page % 5 == 0:
-                print(f"FETCH ComfyRegistry Data: {page}/{sub_json_obj['totalPages']}")
-
-            page += 1
-            time.sleep(0.5)
-
-        print("FETCH ComfyRegistry Data [DONE]")
-
-        for v in full_nodes.values():
-            if 'latest_version' not in v:
-                v['latest_version'] = dict(version='nightly')
-
-        return {'nodes': list(full_nodes.values())}
+    # 选择 fetch 方式和缓存 key
+    if USE_GITEE_CNR_DATA:
+        uri = f"{base_url}/nodes-{form_factor}.json"
+        async def fetch_func():
+            url = uri
+            resp = requests.get(url, timeout=10)
+            resp.raise_for_status()
+            data = resp.json()
+            # 兼容格式
+            if isinstance(data, dict) and 'nodes' in data:
+                return data
+            elif isinstance(data, list):
+                return {'nodes': data}
+            else:
+                return {'nodes': []}
+    else:
+        uri = f"{base_url}/nodes?comfyui_version={comfyui_ver}&form_factor={form_factor}"
+        async def fetch_func():
+            remained = True
+            page = 1
+            full_nodes = {}
+            while remained:
+                sub_uri = f'{base_url}/nodes?page={page}&limit=30&comfyui_version={comfyui_ver}&form_factor={form_factor}'
+                sub_json_obj = await asyncio.wait_for(manager_util.get_data_with_cache(sub_uri, cache_mode=False, silent=True, dont_cache=True), timeout=30)
+                remained = page < sub_json_obj['totalPages']
+                for x in sub_json_obj['nodes']:
+                    full_nodes[x['id']] = x
+                if page % 5 == 0:
+                    print(f"FETCH ComfyRegistry Data: {page}/{sub_json_obj['totalPages']}")
+                page += 1
+                time.sleep(0.5)
+            print("FETCH ComfyRegistry Data [DONE]")
+            for v in full_nodes.values():
+                if 'latest_version' not in v:
+                    v['latest_version'] = dict(version='nightly')
+            return {'nodes': list(full_nodes.values())}
 
     if cache_mode:
         is_cache_loading = True
         cache_state = manager_util.get_cache_state(uri)
-
         if dont_wait:
             if cache_state == 'not-cached':
                 return {}
             else:
                 print("[ComfyUI-Manager] The ComfyRegistry cache update is still in progress, so an outdated cache is being used.")
                 with open(manager_util.get_cache_path(uri), 'r', encoding="UTF-8", errors="ignore") as json_file:
-                    return json.load(json_file)['nodes']
-
+                    data = json.load(json_file)
+                    return data['nodes'] if isinstance(data, dict) and 'nodes' in data else data
         if cache_state == 'cached':
             with open(manager_util.get_cache_path(uri), 'r', encoding="UTF-8", errors="ignore") as json_file:
-                return json.load(json_file)['nodes']
+                data = json.load(json_file)
+                return data['nodes'] if isinstance(data, dict) and 'nodes' in data else data
 
     try:
-        json_obj = await fetch_all()
+        json_obj = await fetch_func()
         manager_util.save_to_cache(uri, json_obj)
         return json_obj['nodes']
-    except:
+    except Exception as e:
         res = {}
-        print("Cannot connect to comfyregistry.")
+        print(f"Cannot connect to comfyregistry. {e}")
     finally:
         if cache_mode:
             is_cache_loading = False
-
     return res
 
 
