@@ -20,7 +20,7 @@ Usage:
 To install ComfyUI-Manager in addition to an existing installation of ComfyUI, you can follow the following steps:
 
 1. goto `ComfyUI/custom_nodes` dir in terminal(cmd)
-2. `git clone https://github.com/dev-easily/ComfyUI-Manager`
+2. `git clone --depth=1 https://github.com/dev-easily/ComfyUI-Manager`
 3. Restart ComfyUI
 
 
