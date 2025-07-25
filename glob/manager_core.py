@@ -47,7 +47,7 @@ version_code = [3, 35]
 version_str = f"V{version_code[0]}.{version_code[1]}" + (f'.{version_code[2]}' if len(version_code) > 2 else '')
 
 
-DEFAULT_CHANNEL = "https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main"
+DEFAULT_CHANNEL = "https://gitee.com/easy-win/ComfyUI-Manager/blob/main"
 
 
 default_custom_nodes_path = None
