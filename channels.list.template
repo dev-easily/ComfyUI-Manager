@@ -1,6 +1,6 @@
-default::https://gitee.com/easy-win/ComfyUI-Manager/blob/main
-recent::https://gitee.com/easy-win/ComfyUI-Manager/blob/main/node_db/new
-legacy::https://gitee.com/easy-win/ComfyUI-Manager/blob/main/node_db/legacy
-forked::https://gitee.com/easy-win/ComfyUI-Manager/blob/main/node_db/forked
-dev::https://gitee.com/easy-win/ComfyUI-Manager/blob/main/node_db/dev
-tutorial::https://gitee.com/easy-win/ComfyUI-Manager/blob/main/node_db/tutorial
+default::https://gitee.com/easy-win/ComfyUI-Manager/raw/main
+recent::https://gitee.com/easy-win/ComfyUI-Manager/raw/main/node_db/new
+legacy::https://gitee.com/easy-win/ComfyUI-Manager/raw/main/node_db/legacy
+forked::https://gitee.com/easy-win/ComfyUI-Manager/raw/main/node_db/forked
+dev::https://gitee.com/easy-win/ComfyUI-Manager/raw/main/node_db/dev
+tutorial::https://gitee.com/easy-win/ComfyUI-Manager/raw/main/node_db/tutorial

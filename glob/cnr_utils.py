@@ -11,7 +11,34 @@ import manager_util
 import requests
 import toml
 
+USE_GITEE_CNR_DATA = True  # 控制是否走Gitee远程json
+
+def detect_form_factor():
+    is_desktop = bool(os.environ.get('__COMFYUI_DESKTOP_VERSION__'))
+    system = platform.system().lower()
+    is_windows = system == 'windows'
+    is_mac = system == 'darwin'
+    is_linux = system == 'linux'
+    if is_desktop:
+        if is_windows:
+            return 'desktop-win'
+        elif is_mac:
+            return 'desktop-mac'
+        else:
+            return 'other'
+    else:
+        if is_windows:
+            return 'git-windows'
+        elif is_mac:
+            return 'git-mac'
+        elif is_linux:
+            return 'git-linux'
+        else:
+            return 'other'
+
 base_url = "https://api.comfy.org"
+if USE_GITEE_CNR_DATA:
+    base_url = "https://gitee.com/easy-win/ComfyUI-Manager/raw/main/.ci/comfy"
 
 
 lock = asyncio.Lock()
@@ -19,6 +46,8 @@ lock = asyncio.Lock()
 is_cache_loading = False
 
 async def get_cnr_data(cache_mode=True, dont_wait=True):
+    if USE_GITEE_CNR_DATA:
+        return await get_cnr_data_from_gitee()
     try:
         return await _get_cnr_data(cache_mode, dont_wait)
     except asyncio.TimeoutError:
@@ -29,6 +58,21 @@ async def _get_cnr_data(cache_mode=True, dont_wait=True):
     global is_cache_loading
 
     uri = f'{base_url}/nodes'
+    form_factor = detect_form_factor()
+    is_desktop = bool(os.environ.get('__COMFYUI_DESKTOP_VERSION__'))
+    if is_desktop:
+        comfyui_ver = manager_core.get_current_comfyui_ver() or 'unknown'
+    else:
+        comfyui_ver = manager_core.get_comfyui_tag() or 'unknown'
+
+
+    async def fetch_all_from_gitee():
+        # url = f"{base_url}/{comfyui_ver}/nodes-{form_factor}.json" not supported now
+        url = f"{base_url}/nodes-{form_factor}.json"
+        resp = requests.get(url, timeout=10)
+        resp.raise_for_status()
+        data = resp.json()
+        return data
 
     async def fetch_all():
         remained = True
@@ -36,38 +80,7 @@ async def _get_cnr_data(cache_mode=True, dont_wait=True):
 
         full_nodes = {}
 
-        
-        # Determine form factor based on environment and platform
-        is_desktop = bool(os.environ.get('__COMFYUI_DESKTOP_VERSION__'))
-        system = platform.system().lower()
-        is_windows = system == 'windows'
-        is_mac = system == 'darwin'
-        is_linux = system == 'linux'
-
         # Get ComfyUI version tag
-        if is_desktop:
-            # extract version from pyproject.toml instead of git tag
-            comfyui_ver = manager_core.get_current_comfyui_ver() or 'unknown'
-        else:
-            comfyui_ver = manager_core.get_comfyui_tag() or 'unknown'
-
-        if is_desktop:
-            if is_windows:
-                form_factor = 'desktop-win'
-            elif is_mac:
-                form_factor = 'desktop-mac'
-            else:
-                form_factor = 'other'
-        else:
-            if is_windows:
-                form_factor = 'git-windows'
-            elif is_mac:
-                form_factor = 'git-mac'
-            elif is_linux:
-                form_factor = 'git-linux'
-            else:
-                form_factor = 'other'
-        
         while remained:
             # Add comfyui_version and form_factor to the API request
             sub_uri = f'{base_url}/nodes?page={page}&limit=30&comfyui_version={comfyui_ver}&form_factor={form_factor}'

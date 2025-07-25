@@ -47,7 +47,7 @@ version_code = [3, 35]
 version_str = f"V{version_code[0]}.{version_code[1]}" + (f'.{version_code[2]}' if len(version_code) > 2 else '')
 
 
-DEFAULT_CHANNEL = "https://gitee.com/easy-win/ComfyUI-Manager/blob/main"
+DEFAULT_CHANNEL = "https://gitee.com/easy-win/ComfyUI-Manager/raw/main"
 
 
 default_custom_nodes_path = None
@@ -848,7 +848,7 @@ class UnifiedManager:
                 return {}
 
         # validate channel - only the channel set by the user is allowed.
-        if channel_url not in valid_channels:
+        if channel_url not in valid_ch annels:
             logging.error(f'[ComfyUI-Manager] An invalid channel was used: {channel_url}')
             raise InvalidChannel(channel_url)
 
