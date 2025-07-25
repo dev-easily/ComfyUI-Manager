@@ -1,0 +1,22 @@
+name: Sync to Gitee
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-to-gitee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Mirror push to Gitee
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote add gitee https://oauth2:${GITEE_TOKEN}@gitee.com/easy-win/ComfyUI-Manager.git
+          git push --mirror gitee

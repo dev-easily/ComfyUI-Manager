@@ -1555,7 +1555,6 @@ class UnifiedManager:
         logging.info(f"[ComfyUI-Manager] Active nodes: {self.active_nodes}")
         logging.info(f"[ComfyUI-Manager] Unknown active nodes: {self.unknown_active_nodes}")
         logging.info(f"[ComfyUI-Manager] Nightly active nodes: {self.active_nodes}")
-        logging.info(f"[ComfyUI-Manager] Disabled nodes: {self.disabled_nodes}")
         logging.info(f"[ComfyUI-Manager] Disabled nightly nodes: {self.nightly_inactive_nodes}")
         logging.info(f"[ComfyUI-Manager] Disabled cnr nodes: {self.cnr_inactive_nodes}")
         logging.info(f"[ComfyUI-Manager] Disabled unknown nodes: {self.unknown_inactive_nodes}")

@@ -1,0 +1,37 @@
+name: Sync with Upstream
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # 每天凌晨3点
+  workflow_dispatch:      # 允许手动触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # 重要：不要用默认token推送
+
+      - name: Set up git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/ltdrdata/ComfyUI-Manager.git
+          git fetch upstream
+
+      - name: Merge upstream/main into main
+        run: |
+          git checkout main
+          git merge --no-edit upstream/main
+        continue-on-error: false  # 有冲突就直接fail
+
+      - name: Push if no conflict
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git push origin main
