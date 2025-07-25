@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+            fetch-depth: 0
 
       - name: Mirror push to Gitee
         env:
@@ -19,4 +21,4 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote add gitee https://oauth2:${GITEE_TOKEN}@gitee.com/easy-win/ComfyUI-Manager.git
-          git push --mirror gitee
+          git push --mirror --force gitee
