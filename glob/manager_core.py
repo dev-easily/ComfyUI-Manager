@@ -3003,7 +3003,12 @@ async def get_unified_total_nodes(channel, mode, regsitry_cache_mode='cache'):
                 v['state'] = 'not-installed'
 
             if 'version' not in v:
-                v['version'] = cnr['latest_version']['version']
+                if 'latest_version' in cnr and 'version' in cnr['latest_version']:
+                    v['version'] = cnr['latest_version']['version']
+                elif 'version' in cnr:
+                    v['version'] = cnr['version']
+                else:
+                    v['version'] = 'unknown'
 
             v['update-state'] = 'true' if updatable else 'false'
         else:
@@ -3060,7 +3065,12 @@ async def get_unified_total_nodes(channel, mode, regsitry_cache_mode='cache'):
                 state = 'not-installed'
 
             if ver is None:
-                ver = cnr['latest_version']['version']
+                if 'latest_version' in cnr and 'version' in cnr['latest_version']:
+                    ver = cnr['latest_version']['version']
+                elif 'version' in cnr:
+                    ver = cnr['version']
+                else:
+                    ver = 'unknown'
 
             item = dict(author=author, title=title, reference=reference, repository=repository, install_type=install_type,
                         description=description, state=state, updatable=updatable, version=ver)
