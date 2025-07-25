@@ -16,5 +16,6 @@ comfyworkflows_sharekey
 github-stats-cache.json
 pip_overrides.json
 *.json
+!/.ci/comfy/*.json
 check2.sh
 /venv/
