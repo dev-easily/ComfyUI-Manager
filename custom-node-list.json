@@ -3891,7 +3891,7 @@
                 "https://github.com/idrirap/ComfyUI-Lora-Auto-Trigger-Words"
             ],
             "install_type": "git-clone",
-            "description": "This project is a fork of [a/https://github.com/Extraltodeus/LoadLoraWithTags](https://github.com/Extraltodeus/LoadLoraWithTags) The aim of these custom nodes is to get an easy access to the tags used to trigger a lora."
+            "description": "The aim of these custom nodes is to get an easy access to the tags used to trigger a lora / lycoris. Extract the tags from civitai or from the safetensors metadatas when available."
         },
         {
             "author": "aianimation55",
@@ -7639,6 +7639,17 @@
         },
         {
             "author": "ShmuelRonen",
+            "title": "ComfyUI-HiggsAudio_Wrapper",
+            "id": "higgs-audio-wrapper",
+            "reference": "https://github.com/ShmuelRonen/ComfyUI-HiggsAudio_Wrapper",
+            "files": [
+                "https://github.com/ShmuelRonen/ComfyUI-HiggsAudio_Wrapper"
+            ],
+            "install_type": "git-clone",
+            "description": "A comprehensive ComfyUI wrapper for HiggsAudio v2, enabling high-quality text-to-speech generation with advanced voice cloning capabilities. Supports multiple voice presets and custom reference audio for voice cloning. Requires transformers==4.45.2 for compatibility."
+        },
+        {
+            "author": "ShmuelRonen",
             "title": "Apply Style Model Adjust for ComfyUI",
             "reference": "https://github.com/ShmuelRonen/ComfyUI-Apply_Style_Model_Adjust",
             "files": [
@@ -8481,6 +8492,16 @@
             ],
             "install_type": "git-clone",
             "description": "Nodes:Abracadabra Summary, Abracadabra"
+        },
+        {
+            "author": "guill",
+            "title": "ComfyUI Droopy Noodles",
+            "reference": "https://github.com/guill/comfyui-droopy-noodles",
+            "files": [
+                "https://github.com/guill/comfyui-droopy-noodles"
+            ],
+            "install_type": "git-clone",
+            "description": "A ComfyUI extension that makes your node connections delightfully droopy. (Disclaimer: despite what it may look like, this extension will not make your monitor taste like spaghetti.)"
         },
         {
             "author": "cerspense",
@@ -11626,17 +11647,6 @@
             ],
             "install_type": "git-clone",
             "description": "'✂️ Inpaint Crop' is a node that crops an image before sampling. The context area can be specified via the mask, expand pixels and expand factor or via a separate (optional) mask.\n'✂️ Inpaint Stitch' is a node that stitches the inpainted image back into the original image without altering unmasked areas."
-        },
-        {
-            "author": "lquesada",
-            "title": "ComfyUI-Interactive",
-            "id": "interactive",
-            "reference": "https://github.com/lquesada/ComfyUI-Interactive",
-            "files": [
-                "https://github.com/lquesada/ComfyUI-Interactive"
-            ],
-            "install_type": "git-clone",
-            "description": "Nodes that allow making the UI interactive, with selectors and switches. Enables selecting across multiple options with the click of a button to move a workflow forward."
         },
         {
             "author": "lquesada",
@@ -15694,9 +15704,10 @@
         {
             "author": "Isi-dev",
             "title": "ComfyUI-Animation_Nodes_and_Workflows",
-            "reference": "https://github.com/Isi-dev/ComfyUI_Animation_Nodes_and_Workflows",
+            "id": "ComfyUI-Animation_Nodes_and_Workflows",
+            "reference": "https://github.com/Isi-dev/ComfyUI-Animation_Nodes_and_Workflows",
             "files": [
-                "https://github.com/Isi-dev/ComfyUI_Animation_Nodes_and_Workflows"
+                "https://github.com/Isi-dev/ComfyUI-Animation_Nodes_and_Workflows"
             ],
             "install_type": "git-clone",
             "description": "These are nodes and workflows that can facilitate the creation of animations and video compilations."
@@ -16339,7 +16350,7 @@
         },
         {
             "author": "Assistant",
-            "title": "ComfyUI-NS-ManySliders",
+            "title": "ComfyUI-NS-Util",
             "reference": "https://github.com/NakamuraShippo/ComfyUI-NS-Util",
             "files": [
                 "https://github.com/NakamuraShippo/ComfyUI-NS-Util"
@@ -16995,8 +17006,8 @@
             "description": "This is a collection of nodes created to aid when managing area conditionings."
         },
         {
-            "author": "Cyber-BCat",
-            "title": "Cyber-BlackCat",
+            "author": "Cyber-BlackCat",
+            "title": "ComfyUI_Auto_Caption",
             "reference": "https://github.com/Cyber-BlackCat/ComfyUI_Auto_Caption",
             "files": [
                 "https://github.com/Cyber-BlackCat/ComfyUI_Auto_Caption"
@@ -17005,8 +17016,8 @@
             "description": "Using LLM and Joy tag pipeline to tag your image(s folder), it's suitable for train FLUX LoRA and also sdxl. Load images in order!"
         },
         {
-            "author": "Cyber-BCat",
-            "title": "Cyber-BlackCat",
+            "author": "Cyber-BlackCat",
+            "title": "ComfyUI-Image-Vector",
             "reference": "https://github.com/Cyber-BlackCat/ComfyUI-Image-Vector",
             "files": [
                 "https://github.com/Cyber-BlackCat/ComfyUI-Image-Vector"
@@ -18911,17 +18922,6 @@
             ],
             "install_type": "git-clone",
             "description": "The PonySwitch node is a custom node for ComfyUI that modifies prompts based on a toggle switch and adds configurable pony tags."
-        },
-        {
-            "author": "Isi-dev",
-            "title": "ComfyUI-Animation_Nodes_and_Workflows",
-            "id": "ComfyUI-Animation_Nodes_and_Workflows",
-            "reference": "https://github.com/Isi-dev/ComfyUI-Animation_Nodes_and_Workflows",
-            "files": [
-                "https://github.com/Isi-dev/ComfyUI-Animation_Nodes_and_Workflows"
-            ],
-            "install_type": "git-clone",
-            "description": "These are nodes and workflows that can facilitate the creation of animations and video compilations."
         },
         {
             "author": "LatentSpaceDirective",
@@ -23744,6 +23744,16 @@
             "description": "ComfyUI nodes for image processing."
         },
         {
+            "author": "keit",
+            "title": "ComfyUI-musubi-tuner",
+            "reference": "https://github.com/keit0728/ComfyUI-musubi-tuner",
+            "files": [
+                "https://github.com/keit0728/ComfyUI-musubi-tuner"
+            ],
+            "install_type": "git-clone",
+            "description": "This is a custom node that allows you to run musubi-tuner from ComfyUI."
+        },
+        {
             "author": "Mango1010",
             "title": "Mango Node Pack",
             "id": "MangoNodePack",
@@ -24966,17 +24976,6 @@
             "description": "Send generated images or videos to any HTTP webhook with optional parameters such as prompt-id and metadata payload."
         },
         {
-            "author": "zouyu",
-            "title": "ComfyUI-SaveImageS3",
-            "id": "comfyui-saveimages3",
-            "reference": "https://github.com/mrchipset/ComfyUI-SaveImageS3",
-            "files": [
-                "https://github.com/mrchipset/ComfyUI-SaveImageS3"
-            ],
-            "install_type": "git-clone",
-            "description": "This extension offers a custom node to save image to S3-compatible oss."
-        },
-        {
             "author": "CGAnimitta",
             "title": "ComfyUI_CGAnimittaTools",
             "reference": "https://github.com/cganimitta/ComfyUI_CGAnimittaTools",
@@ -25085,16 +25084,6 @@
             ],
             "install_type": "git-clone",
             "description": "ComfyUI's non-persistent (in-memory) image preview feature"
-        },
-        {
-            "author": "yanlang0123",
-            "title": "ComfyUI_Lam",
-            "reference": "https://github.com/yanlang0123/ComfyUI_Lam",
-            "files": [
-                "https://github.com/yanlang0123/ComfyUI_Lam"
-            ],
-            "install_type": "git-clone",
-            "description": "This extension has some useful nodes, loops, wechat public number +AI chat drawing, distributed cluster."
         },
         {
             "author": "KERRY-YUAN",
@@ -27687,7 +27676,7 @@
         },
         {
             "author": "mo230761",
-            "title": "ComfyUI-Text-Translation",
+            "title": "InsertAnything-ComfyUI-official",
             "reference": "https://github.com/mo230761/InsertAnything-ComfyUI-official",
             "files": [
                 "https://github.com/mo230761/InsertAnything-ComfyUI-official"
@@ -27836,6 +27825,16 @@
             "description": "An interactive, classic channel mixer color adjustment node for ComfyUI, with realtime preview and a responsive editing interface."
         },
         {
+            "author": "o-l-l-i",
+            "title": "Olm Color Balance for ComfyUI",
+            "reference": "https://github.com/o-l-l-i/ComfyUI-Olm-ColorBalance",
+            "files": [
+                "https://github.com/o-l-l-i/ComfyUI-Olm-ColorBalance"
+            ],
+            "install_type": "git-clone",
+            "description": "An interactive color balance adjustment node for ComfyUI, featuring a clean interface and realtime preview."
+        },
+        {
             "author": "xiaogui8dangjia",
             "title": "Comfyui-imagetoSTL",
             "reference": "https://github.com/xiaogui8dangjia/Comfyui-imagetoSTL",
@@ -27969,7 +27968,6 @@
         {
             "author": "keit",
             "title": "ComfyUI-keitNodes",
-            "id": "comfyui-image-toolkit",
             "reference": "https://github.com/keit0728/ComfyUI-keitNodes",
             "files": [
                 "https://github.com/keit0728/ComfyUI-keitNodes"
@@ -29318,17 +29316,6 @@
         },
         {
             "author": "Ben Staniford",
-            "title": "Comfy Contact Sheet Image Loader",
-            "id": "comfy-contact-sheet-image-loader",
-            "reference": "https://github.com/benstaniford/comfy-contact-sheet-image-loader",
-            "files": [
-                "https://github.com/benstaniford/comfy-contact-sheet-image-loader"
-            ],
-            "install_type": "git-clone",
-            "description": "Displays up to 64 recent images from a folder as numbered thumbnails in a grid contact sheet format, allowing you to select and load one for post-processing"
-        },
-        {
-            "author": "Ben Staniford",
             "title": "Prompt Database for ComfyUI",
             "reference": "https://github.com/benstaniford/comfy-prompt-db",
             "files": [
@@ -29952,6 +29939,28 @@
             "install_type": "git-clone",
             "description": "Book Cover Finder tool that wraps openlibrary.org"
         },
+        {
+            "author": "RndNanthu",
+            "title": "ComfyUI-RndNanthu",
+            "id": "ComfyUI-RndNanthu",
+            "reference": "https://github.com/rndnanthu/ComfyUI-RndNanthu",
+            "files": [
+                "https://github.com/rndnanthu/ComfyUI-RndNanthu"
+            ],
+            "install_type": "git-clone",
+            "description": "Film Grain simulation, Log Color Conversions, Color Scopes (RGB Parade, Vectorscope, Gamut Warnings), False Color, and more."
+        },
+        {
+            "author": "Pun0110",
+            "title": "CSV Styler",
+            "reference": "https://github.com/Pun0110/ComfyUI-CSV-Styler",
+            "files": [
+                "https://github.com/Pun0110/ComfyUI-CSV-Styler"
+            ],
+            "install_type": "git-clone",
+            "description": "Repository contains CSV Styler - custom node for ComfyUI. It loads styles from styles.csv file (Automatic1111 Web-Ui styles.csv format) and combine them with provided positive and negative prompt.\nNOTE: 'styles.csv' should be placed in ComfyUI root directory (near main.py)."
+        },
+
 
 
 
@@ -30381,4 +30390,5 @@
         }
     ]
 }
+
 

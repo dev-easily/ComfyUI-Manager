@@ -5323,13 +5323,19 @@
             "AdjustBottomAlphaDistance",
             "AlignFace",
             "Alpha Crop and Position Image",
+            "CreateOutlineMask",
             "GenerateTimestamp",
             "GetMostCommonColors",
             "ImageCompositeAbsoluteByContainer",
             "LoadImageFromUrl",
+            "LoraLoaderModelWithNameOnly",
+            "LoraLoaderWithName",
+            "MaskMorphologyNode",
             "OpenAI Image 2 Text",
             "PadMask",
             "ReadImage",
+            "ShowrunnerFilename",
+            "ShowrunnerSeed",
             "Shrink Image"
         ],
         {
@@ -7047,6 +7053,14 @@
             "title_aux": "xcpNodes [WIP]"
         }
     ],
+    "https://github.com/love2hina-net/ComfyUI-Local-Translator": [
+        [
+            "LocalTranslator"
+        ],
+        {
+            "title_aux": "ComfyUI-Local-Translator"
+        }
+    ],
     "https://github.com/lrzjason/Comfyui-Condition-Utils": [
         [
             "LoadCondition",
@@ -7697,6 +7711,7 @@
             "Ino_RandomCharacterPrompt",
             "Ino_SaveFile",
             "Ino_SaveImage",
+            "Ino_StringToggleCase",
             "Ino_VideoConvert"
         ],
         {
@@ -8016,8 +8031,10 @@
             "przewodo WanGetMaxImageResolutionByAspectRatio",
             "przewodo WanImageToVideoAdvancedSampler",
             "przewodo WanModelTypeSelector",
+            "przewodo WanPromptChunkStacker",
             "przewodo WanVideoEnhanceAVideo",
             "przewodo WanVideoGenerationModeSelector",
+            "przewodo WanVideoLoraStack",
             "przewodo WanVideoVaeDecode"
         ],
         {
@@ -8868,6 +8885,20 @@
             "title_aux": "ComfyUI-CacheImageNode"
         }
     ],
+    "https://github.com/thavocado/comfyui-danbooru-lookup": [
+        [
+            "DanbooruFAISSLookup",
+            "DanbooruFAISSLookupAdvanced",
+            "WD14ToConditioning"
+        ],
+        {
+            "author": "ComfyUI Danbooru Lookup",
+            "description": "ComfyUI node that performs FAISS cosine similarity lookup on Danbooru embeddings using CLIP conditioning inputs.",
+            "nickname": "Danbooru Lookup",
+            "title": "Danbooru FAISS Lookup",
+            "title_aux": "comfyui-danbooru-lookup"
+        }
+    ],
     "https://github.com/thderoo/ComfyUI-_topfun_s_nodes": [
         [
             "ConditioningPerturbation",
@@ -9473,6 +9504,7 @@
             "LoadImageFromDirectoryNode",
             "LoadImageFromURLNode",
             "LoadStringFromDirectoryNode",
+            "OllamaVisionNode",
             "OutputIsListNode",
             "OutputIsNonListNode",
             "PrependTagsNode",

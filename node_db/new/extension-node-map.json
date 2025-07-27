@@ -3944,7 +3944,7 @@
             "Vector"
         ],
         {
-            "title_aux": "Cyber-BlackCat"
+            "title_aux": "ComfyUI-Image-Vector"
         }
     ],
     "https://github.com/Cyber-BlackCat/ComfyUI-MoneyMaker": [
@@ -3978,7 +3978,7 @@
             "LoadManyImages"
         ],
         {
-            "title_aux": "Cyber-BlackCat"
+            "title_aux": "ComfyUI_Auto_Caption"
         }
     ],
     "https://github.com/Cyberschorsch/ComfyUI-checkpoint-config-loader": [
@@ -4400,10 +4400,10 @@
     "https://github.com/Dontdrunk/ComfyUI-DD-Nodes": [
         [
             "DD-AdvancedFusion",
-            "DD-ColorBackgroundGenerator",
             "DD-ConditionSwitcher",
             "DD-DimensionCalculator",
             "DD-ImageSizeLimiter",
+            "DD-ImageStroke",
             "DD-ImageToVideo",
             "DD-ImageUniformSize",
             "DD-LatentSwitcher",
@@ -4534,6 +4534,8 @@
             "HfDualClipLoader",
             "HfLoraLoader",
             "HfLoraLoaderModelOnly",
+            "HfQuadrupleClipLoader",
+            "HfTripleClipLoader",
             "HfVaeLoader",
             "ImageDifferenceCmap",
             "PhotoDoddleConditioning"
@@ -6639,21 +6641,6 @@
         ],
         {
             "title_aux": "ComfyUI-UniAnimate-W"
-        }
-    ],
-    "https://github.com/Isi-dev/ComfyUI_Animation_Nodes_and_Workflows": [
-        [
-            "CLIPTextEncodeStyles",
-            "JoinVideos",
-            "MakeDrivingVideoForLivePortrait",
-            "MakePortraitWalk",
-            "MoveInOrOut",
-            "MoveLeftOrRight",
-            "MoveUpOrDown",
-            "Replace_Img_or_Vid_Bg_Assistant"
-        ],
-        {
-            "title_aux": "ComfyUI-Animation_Nodes_and_Workflows"
         }
     ],
     "https://github.com/Isulion/ComfyUI_Isulion": [
@@ -9412,7 +9399,7 @@
             "NS-FlexPreset"
         ],
         {
-            "title_aux": "ComfyUI-NS-ManySliders"
+            "title_aux": "ComfyUI-NS-Util"
         }
     ],
     "https://github.com/NeoDroleDeGueule/comfyui-image-mixer": [
@@ -10191,6 +10178,14 @@
         ],
         {
             "title_aux": "Pseudocomfy"
+        }
+    ],
+    "https://github.com/Pun0110/ComfyUI-CSV-Styler": [
+        [
+            "PT.CSV Styler"
+        ],
+        {
+            "title_aux": "CSV Styler"
         }
     ],
     "https://github.com/Q-Bug4/Comfyui-Qb-DateNodes": [
@@ -11439,6 +11434,18 @@
         ],
         {
             "title_aux": "ComfyUI-Gemini_TTS"
+        }
+    ],
+    "https://github.com/ShmuelRonen/ComfyUI-HiggsAudio_Wrapper": [
+        [
+            "HiggsAudio",
+            "LoadHiggsAudioModel",
+            "LoadHiggsAudioPrompt",
+            "LoadHiggsAudioSystemPrompt",
+            "LoadHiggsAudioTokenizer"
+        ],
+        {
+            "title_aux": "ComfyUI-HiggsAudio_Wrapper"
         }
     ],
     "https://github.com/ShmuelRonen/ComfyUI-HunyuanVideoSamplerSave": [
@@ -16030,6 +16037,7 @@
             "BlenderInputSeed",
             "BlenderInputString",
             "BlenderInputStringMultiline",
+            "BlenderOutputDownload3D",
             "BlenderOutputSaveImage"
         ],
         {
@@ -22515,13 +22523,19 @@
             "AdjustBottomAlphaDistance",
             "AlignFace",
             "Alpha Crop and Position Image",
+            "CreateOutlineMask",
             "GenerateTimestamp",
             "GetMostCommonColors",
             "ImageCompositeAbsoluteByContainer",
             "LoadImageFromUrl",
+            "LoraLoaderModelWithNameOnly",
+            "LoraLoaderWithName",
+            "MaskMorphologyNode",
             "OpenAI Image 2 Text",
             "PadMask",
             "ReadImage",
+            "ShowrunnerFilename",
+            "ShowrunnerSeed",
             "Shrink Image"
         ],
         {
@@ -22633,8 +22647,25 @@
     "https://github.com/fblissjr/ComfyUI-WanActivationEditor": [
         [
             "WanVideoActivationEditor",
-            "WanVideoActivationScheduler",
-            "WanVideoBlockActivationBuilder"
+            "WanVideoAdvancedActivationEditor",
+            "WanVideoBlockActivationBuilder",
+            "WanVideoBlockActivationViewer",
+            "WanVideoBlockStrengthBuilder",
+            "WanVideoDirectInjector",
+            "WanVideoEmbeddingAmplifier",
+            "WanVideoEmbeddingAnalyzer",
+            "WanVideoEmbeddingDatabase",
+            "WanVideoGuidanceController",
+            "WanVideoInjectionTester",
+            "WanVideoLatentEncoder",
+            "WanVideoLatentInjector",
+            "WanVideoNoiseController",
+            "WanVideoProjectionBooster",
+            "WanVideoSequentialMixer",
+            "WanVideoStrengthVisualizer",
+            "WanVideoVectorArithmetic",
+            "WanVideoVectorDifference",
+            "WanVideoVectorInterpolation"
         ],
         {
             "title_aux": "ComfyUI-WanActivationEditor"
@@ -27338,6 +27369,14 @@
             "title_aux": "ComfyUI-keitNodes"
         }
     ],
+    "https://github.com/keit0728/ComfyUI-musubi-tuner": [
+        [
+            "MusubiTunerWanGenerateVideo"
+        ],
+        {
+            "title_aux": "ComfyUI-musubi-tuner"
+        }
+    ],
     "https://github.com/kenjiqq/qq-nodes-comfyui": [
         [
             "Any List",
@@ -31482,7 +31521,7 @@
             "ReduxProcess"
         ],
         {
-            "title_aux": "ComfyUI-Text-Translation"
+            "title_aux": "InsertAnything-ComfyUI-official"
         }
     ],
     "https://github.com/mobilehacker/ComfyUI_format-lora-stack": [
@@ -32537,6 +32576,14 @@
         ],
         {
             "title_aux": "Olm Channel Mixer for ComfyUI"
+        }
+    ],
+    "https://github.com/o-l-l-i/ComfyUI-Olm-ColorBalance": [
+        [
+            "OlmColorBalance"
+        ],
+        {
+            "title_aux": "Olm Color Balance for ComfyUI"
         }
     ],
     "https://github.com/o-l-l-i/ComfyUI-Olm-CurveEditor": [
@@ -34278,6 +34325,20 @@
         ],
         {
             "title_aux": "Dia realistic TTS"
+        }
+    ],
+    "https://github.com/rndnanthu/ComfyUI-RndNanthu": [
+        [
+            "AutoGradePro",
+            "ColorAnalysisPlotNode",
+            "ColorSpaceSim",
+            "ConvertToLogImage",
+            "FilmGrain",
+            "ProColorGrading",
+            "PromptGenerator"
+        ],
+        {
+            "title_aux": "ComfyUI-RndNanthu"
         }
     ],
     "https://github.com/robertvoy/ComfyUI-Distributed": [
@@ -36819,6 +36880,7 @@
         [
             "VolcengineI2VS2Pro",
             "VolcengineImgEditV3",
+            "volcengine-doubao-seedance",
             "volcengine-i2v-s2pro",
             "volcengine-img-edit-v3",
             "volcengine-seedream-v3"
@@ -39431,8 +39493,10 @@
             "easy loadImageBase64",
             "easy loadImagesForLoop",
             "easy loraNames",
+            "easy loraPromptApply",
             "easy loraStack",
             "easy loraStackApply",
+            "easy loraSwitcher",
             "easy makeImageForICLora",
             "easy mathFloat",
             "easy mathInt",
