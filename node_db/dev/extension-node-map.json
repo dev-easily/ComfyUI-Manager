@@ -1557,6 +1557,15 @@
             "title_aux": "ComfyUI-AppIO"
         }
     ],
+    "https://github.com/Filexor/File_x_dynamic_prompt2": [
+        [
+            "File_x_DynamicPrompt2",
+            "File_x_DynamicPrompt2 with States IO"
+        ],
+        {
+            "title_aux": "File_x_dynamic_prompt2"
+        }
+    ],
     "https://github.com/FinetunersAI/comfyui-fast-group-link": [
         [
             "FastGroupLink"
@@ -2056,6 +2065,34 @@
             "title_aux": "ComfyUI-Lucian [WIP]"
         }
     ],
+    "https://github.com/LucianoCirino/ComfyUI-invAIder-Nodes": [
+        [
+            "\ud83d\udc7e Any Switch",
+            "\ud83d\udc7e Any Switch Large",
+            "\ud83d\udc7e Any Switch Medium",
+            "\ud83d\udc7e Any to Any",
+            "\ud83d\udc7e Debug Tensor Structure",
+            "\ud83d\udc7e Evaluate Anything",
+            "\ud83d\udc7e Image Crop",
+            "\ud83d\udc7e Image Grid",
+            "\ud83d\udc7e Image Overlay",
+            "\ud83d\udc7e Img to Gif",
+            "\ud83d\udc7e Int to Bits",
+            "\ud83d\udc7e Is Image Fully Transparent",
+            "\ud83d\udc7e Load Any",
+            "\ud83d\udc7e Load Image Batch",
+            "\ud83d\udc7e Number Counter",
+            "\ud83d\udc7e Preview Image if True",
+            "\ud83d\udc7e Save AnimPNG If True",
+            "\ud83d\udc7e Save Any",
+            "\ud83d\udc7e Save Image If True",
+            "\ud83d\udc7e Seed Controller",
+            "\ud83d\udc7e Signed Integer"
+        ],
+        {
+            "title_aux": "ComfyUI-invAIder-Nodes"
+        }
+    ],
     "https://github.com/LyazS/ComfyUI-aznodes": [
         [
             "CrossFadeImageSequence",
@@ -2176,6 +2213,7 @@
             "ImageCountConcatenate",
             "ImageHeigthStitch",
             "ImageWidthStitch",
+            "Image_Resize",
             "MergeImageChannels",
             "random_any",
             "show_type",
@@ -4075,12 +4113,23 @@
             "title_aux": "Gen Data Tester [WIP]"
         }
     ],
+    "https://github.com/bleash-dev/Comfyui-FileSytem-Manager": [
+        [
+            "custom_nodes",
+            "web_extensions"
+        ],
+        {
+            "title_aux": "Comfyui-FileSytem-Manager"
+        }
+    ],
     "https://github.com/blepping/comfyui_dum_samplers": [
         [
             "BatchMergeSampler",
             "CacheAwareEulerSampler",
             "CyclePaddingSampler",
             "HistorySampler",
+            "PingPongSampler",
+            "RestlessScheduler",
             "SimilarityAncestralEulerSampler",
             "SimilarityClampEulerSampler"
         ],
@@ -8675,22 +8724,6 @@
             "title_aux": "comfyui-sourceful-official"
         }
     ],
-    "https://github.com/spawner1145/comfyui-spawner-nodes": [
-        [
-            "ConditioningCrossAttention",
-            "ConditioningInspector",
-            "ConditioningPacker",
-            "ImageMetadataReader",
-            "SaveTrainingDataPair",
-            "TensorInspector",
-            "TensorShapeAdapter",
-            "TextEncoderDecoder",
-            "json_process"
-        ],
-        {
-            "title_aux": "comfyui-spawner-nodes"
-        }
-    ],
     "https://github.com/sswink/comfyui-lingshang": [
         [
             "LS_ALY_Seg_Body_Utils",
@@ -9742,6 +9775,29 @@
         ],
         {
             "title_aux": "Comfyui_image2prompt"
+        }
+    ],
+    "https://github.com/zhuanvi/ComfyUI-ZVNodes": [
+        [
+            "ImageCounterNodeZV",
+            "JoinListZV",
+            "JsonListIndexerZV",
+            "JsonListLengthZV",
+            "JsonListNodeZV",
+            "JsonListSlicerZV",
+            "JsonListToMaskZV",
+            "JsonReaderZV",
+            "LoadImageFromDirZV",
+            "LoadTxtFromDirZV",
+            "RandomSelectListZV",
+            "SaveImageToPathZV",
+            "SaveTxtToPathZV",
+            "TriangleCharacterLayoutZV",
+            "VideoSceneDetectorZV",
+            "VideoSpeedZV"
+        ],
+        {
+            "title_aux": "ComfyUI-ZVNodes [WIP]"
         }
     ],
     "https://github.com/zjkhurry/comfyui_MetalFX": [
