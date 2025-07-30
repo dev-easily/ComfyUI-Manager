@@ -459,6 +459,9 @@
     "https://github.com/42lux/ComfyUI-42lux": [
         [
             "FluxEmptyLatentSizePicker",
+            "HighResFixApply",
+            "HighResFixConditioningDuplicator",
+            "HighResFixModelInjection",
             "ModelSamplingFluxNormalized",
             "SoulSampler",
             "SoulSamplerAdvanced",
@@ -4002,14 +4005,23 @@
     ],
     "https://github.com/Cyrostar/ComfyUI-Artha-Gemini": [
         [
-            "GeminiCondense",
-            "GeminiInstruct",
-            "GeminiMotion",
-            "GeminiPrompter",
-            "GeminiQuestion",
-            "GeminiResponse",
-            "GeminiTranslate",
-            "GeminiVision"
+            "Gemini Backdrop",
+            "Gemini Body",
+            "Gemini Cloth",
+            "Gemini Condense",
+            "Gemini Face",
+            "Gemini Form",
+            "Gemini Instruct",
+            "Gemini Makeup",
+            "Gemini Markdown",
+            "Gemini Motion",
+            "Gemini Operation",
+            "Gemini Portrait",
+            "Gemini Prompter",
+            "Gemini Question",
+            "Gemini Response",
+            "Gemini Translate",
+            "Gemini Vision"
         ],
         {
             "title_aux": "ComfyUI-Artha-Gemini"
@@ -8007,6 +8019,9 @@
             "FindValueFromFile|LP",
             "FloatToInt|LP",
             "FloatToString|LP",
+            "GetComfyUIFolderPath|LP",
+            "GetComfyUIHttpFolderPath|LP",
+            "GetFilenameByIndexInFolder|LP",
             "Hard Model Unloader [LP]",
             "HardModelUnloader|LP",
             "HundredthsSimpleFloatSlider|LP",
@@ -8829,12 +8844,14 @@
             "Crop Image By Mask",
             "Flux Empty Latent Image",
             "Flux Image Scale To Total Pixels (Flux Safe)",
+            "Flux Resolution Selector",
             "FluxResolutionMatcher",
             "Image Scale To Total Pixels (SDXL Safe)",
             "LatentHalfMasks",
             "Place Image By Mask",
             "Prompt With Guidance (Flux)",
-            "Sdxl Empty Latent Image"
+            "Sdxl Empty Latent Image",
+            "Sdxl Resolution Selector"
         ],
         {
             "title_aux": "ComfyUI-MaxedOut"
@@ -15669,6 +15686,7 @@
             "Comfly_gpt_image_1",
             "Comfly_gpt_image_1_edit",
             "Comfly_kling_image2video",
+            "Comfly_kling_multi_image2video",
             "Comfly_kling_text2video",
             "Comfly_lip_sync",
             "Comfly_mj_video",
@@ -20596,6 +20614,7 @@
             "TestAsyncConcurrentLimit",
             "TestAsyncError",
             "TestAsyncLazyCheck",
+            "TestAsyncProgressUpdate",
             "TestAsyncResourceUser",
             "TestAsyncTimeout",
             "TestAsyncValidation",
@@ -20625,6 +20644,7 @@
             "TestSleep",
             "TestStringConditions",
             "TestSyncError",
+            "TestSyncProgressUpdate",
             "TestToBoolNode",
             "TestVariadicAverage",
             "TestWhileLoopClose",
@@ -22597,30 +22617,6 @@
             "title_aux": "ComfyUI-EZ-AF-Nodes"
         }
     ],
-    "https://github.com/fablestudio/ComfyUI-Showrunner-Utils": [
-        [
-            "AdjustBottomAlphaDistance",
-            "AlignFace",
-            "Alpha Crop and Position Image",
-            "CreateOutlineMask",
-            "GenerateTimestamp",
-            "GetMostCommonColors",
-            "ImageCompositeAbsoluteByContainer",
-            "LoadImageFromUrl",
-            "LoraLoaderModelWithNameOnly",
-            "LoraLoaderWithName",
-            "MaskMorphologyNode",
-            "OpenAI Image 2 Text",
-            "PadMask",
-            "ReadImage",
-            "ShowrunnerFilename",
-            "ShowrunnerSeed",
-            "Shrink Image"
-        ],
-        {
-            "title_aux": "ComfyUI-Showrunner-Utils"
-        }
-    ],
     "https://github.com/facok/ComfyUI-HunyuanVideoMultiLora": [
         [
             "HunyuanVideoLoraLoader"
@@ -24409,6 +24405,19 @@
             "title_aux": "ComfyUI DataBeast"
         }
     ],
+    "https://github.com/hao-ai-lab/FastVideo": [
+        [
+            "DITConfig",
+            "InferenceArgs",
+            "LoadImagePath",
+            "TextEncoderConfig",
+            "VAEConfig",
+            "VideoGenerator"
+        ],
+        {
+            "title_aux": "ComfyUI-FastVideo"
+        }
+    ],
     "https://github.com/haohaocreates/ComfyUI-HH-Image-Selector": [
         [
             "Image Selector"
@@ -26019,6 +26028,7 @@
             "Get Size JK",
             "Guidance Default JK",
             "HintImageEnchance JK",
+            "Hy3D Cam Config 20to21 JK",
             "IPAAdapterFaceIDBatch",
             "IPAdapter",
             "IPAdapterAdvanced",
@@ -27500,19 +27510,6 @@
             "title_aux": "qq-nodes-comfyui"
         }
     ],
-    "https://github.com/kevin314/ComfyUI-FastVideo": [
-        [
-            "DITConfig",
-            "InferenceArgs",
-            "LoadImagePath",
-            "TextEncoderConfig",
-            "VAEConfig",
-            "VideoGenerator"
-        ],
-        {
-            "title_aux": "ComfyUI-FastVideo"
-        }
-    ],
     "https://github.com/kevinmcmahondev/comfyui-kmcdev-image-filter-adjustments": [
         [
             "ImageBlankAlpha",
@@ -28230,6 +28227,7 @@
         [
             "CreateCFGScheduleFloatList",
             "DownloadAndLoadWav2VecModel",
+            "DummyComfyWanModelObject",
             "ExtractStartFramesForContinuations",
             "FantasyTalkingModelLoader",
             "FantasyTalkingWav2VecEmbeds",
@@ -31106,6 +31104,7 @@
     "https://github.com/mcDandy/more_math": [
         [
             "mrmth_ConditioningMathNode",
+            "mrmth_FloatMathNode",
             "mrmth_FloatToInt",
             "mrmth_ImageMathNode",
             "mrmth_IntToFloat",
@@ -34053,6 +34052,14 @@
             "title_aux": "Raffle"
         }
     ],
+    "https://github.com/rainlizard/ComfyUI-WhirlpoolUpscaler": [
+        [
+            "WhirlpoolUpscaler"
+        ],
+        {
+            "title_aux": "Whirlpool Upscaler"
+        }
+    ],
     "https://github.com/ramesh-x90/ComfyUI_pyannote": [
         [
             "Speaker Diarization",
@@ -34483,6 +34490,7 @@
         [
             "DistributedCollector",
             "DistributedSeed",
+            "ImageBatchDivider",
             "UltimateSDUpscaleDistributed"
         ],
         {
@@ -40001,6 +40009,7 @@
     ],
     "https://github.com/yuvraj108c/ComfyUI-YoloNasPose-Tensorrt": [
         [
+            "YoloNasPoseEngineBuilder",
             "YoloNasPoseTensorrt"
         ],
         {
@@ -40054,6 +40063,14 @@
         ],
         {
             "title_aux": "Comfyui-Distill-Any-Depth"
+        }
+    ],
+    "https://github.com/zade23/Comfyui-MoGe2": [
+        [
+            "RunMoGe2Process"
+        ],
+        {
+            "title_aux": "ComfyUI-MoGe2"
         }
     ],
     "https://github.com/zaheenrahman/ComfyUI-ColorCorrection": [
