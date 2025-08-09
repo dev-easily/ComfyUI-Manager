@@ -1156,6 +1156,14 @@
             "title_aux": "ComfyUI-send-eagle-pro"
         }
     ],
+    "https://github.com/Charonartist/comfyui-lora-random-selector": [
+        [
+            "LoRARandomSelector"
+        ],
+        {
+            "title_aux": "ComfyUI LoRA Random Selector [WIP]"
+        }
+    ],
     "https://github.com/ChrisColeTech/ComfyUI-Get-Random-File": [
         [
             "Get Image File By Index",
@@ -1286,22 +1294,13 @@
         [
             "ColorGeneratorNode",
             "ConditioningInspector",
-            "EmptyLatentTransparent",
             "FluxLayerDiffuseConditioningFix",
-            "FluxLayerDiffuseDecoder",
             "FluxLayerDiffuseDecoderSimple",
             "FluxLayerDiffuseEmptyConditioning",
-            "FluxLayerDiffuseI2I",
-            "FluxLayerDiffuseI2IAdvanced",
             "FluxLayerDiffuseInfo",
-            "FluxLayerDiffuseModelManager",
-            "FluxLayerDiffuseSampler",
             "FluxLayerDiffuseStandaloneLoader",
-            "FluxLayerDiffuseT2I",
-            "FluxLayerDiffuseT2IAdvanced",
-            "FluxLayerDiffuseTroubleshooter",
-            "FluxLayerDiffuseVAELoader",
-            "FluxLayerDiffuseWorkflowHelper",
+            "LoadImageSequence",
+            "LoadImageSequenceInfo",
             "PreviewTransparentImage",
             "SaveTransparentImage",
             "TransparentImageInfo"
@@ -2410,6 +2409,16 @@
             "title_aux": "ComfyUI-MoviePy"
         }
     ],
+    "https://github.com/MatthewClayHarrison/ComfyUI-MetaMan": [
+        [
+            "MetaManDependencyResolver",
+            "MetaManUniversalNode",
+            "MetaManWorkflowSaver"
+        ],
+        {
+            "title_aux": "MetaMan - Universal AI Image Metadata Manager [UNSAFE]"
+        }
+    ],
     "https://github.com/Maxim-Dey/ComfyUI-MaksiTools": [
         [
             "\ud83d\udd22 Return Boolean",
@@ -2481,7 +2490,8 @@
             "mb Text",
             "mb Text or File",
             "mb Text to File",
-            "mb Textbox"
+            "mb Textbox",
+            "mb Value"
         ],
         {
             "title_aux": "ComfyUI-Mockba"
@@ -6694,6 +6704,14 @@
             "title_aux": "ComfyUI-DiffBIR"
         }
     ],
+    "https://github.com/jtydhr88/ComfyUI-StableStudio": [
+        [
+            "ComfyUIStableStudio"
+        ],
+        {
+            "title_aux": "ComfyUI-StableStudio [WIP]"
+        }
+    ],
     "https://github.com/jtydhr88/ComfyUI-Unique3D": [
         [
             "Unique3DLoadPipeline",
@@ -9047,6 +9065,7 @@
             "CombineStrings",
             "Connector",
             "FloatToStr",
+            "Gallery",
             "InputText",
             "SSchlTextEncoder",
             "ShowText",
@@ -10198,7 +10217,9 @@
             "SaveTxtToPathZV",
             "TriangleCharacterLayoutZV",
             "VideoSceneDetectorZV",
-            "VideoSpeedZV"
+            "VideoSpeedZV",
+            "doubaoI2INodeZV",
+            "doubaoT2INodeZV"
         ],
         {
             "title_aux": "ComfyUI-ZVNodes [WIP]"
