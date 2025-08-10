@@ -1,6 +1,77 @@
 {
     "custom_nodes": [
         {
+            "author": "eric183",
+            "title": "ComfyUI-Only",
+            "id": "comfyui-only",
+            "reference": "https://github.com/eric183/ComfyUI-Only",
+            "files": [
+                "https://github.com/eric183/ComfyUI-Only"
+            ],
+            "install_type": "git-clone",
+            "description": "A collection of custom nodes for ComfyUI, originally focused on workflow parsing, now expanded to provide advanced file loading features like 'Load Latent (Advanced)' for drag-and-drop latent file uploads and 'WorkflowImageFileLoader' for parsing prompts from image metadata. It also adds a js extension for a better UI experience."
+        },
+        {
+            "author": "o-l-l-i",
+            "title": "Olm Histogram for ComfyUI",
+            "reference": "https://github.com/o-l-l-i/ComfyUI-Olm-Histogram",
+            "files": [
+                "https://github.com/o-l-l-i/ComfyUI-Olm-Histogram"
+            ],
+            "install_type": "git-clone",
+            "description": "A compact, real-time histogram analysis node for ComfyUI — with easy-to-use interactive UI, smooth rendering, and accurate pixel sampling. Built for compositing-style workflows and color diagnostics."
+        },
+        {
+            "author": "o-l-l-i",
+            "title": "Olm LGG (Lift, Gamma, Gain) for ComfyUI",
+            "reference": "https://github.com/o-l-l-i/ComfyUI-Olm-LGG",
+            "files": [
+                "https://github.com/o-l-l-i/ComfyUI-Olm-LGG"
+            ],
+            "install_type": "git-clone",
+            "description": "A visual, interactive Lift, Gamma, Gain color correction node for ComfyUI, tailored for precise color grading workflows."
+        },
+        {
+            "author": "SaturMars",
+            "title": "ComfyUI Qwen LoRA Converter Node",
+            "reference": "https://github.com/SaturMars/ComfyUI-QwenImageLoraConverter",
+            "files": [
+                "https://github.com/SaturMars/ComfyUI-QwenImageLoraConverter"
+            ],
+            "install_type": "git-clone",
+            "description": "This is a ComfyUI custom node used to convert Qwen-Image LoRA files trained on the ModelScope platform to a format that ComfyUI can recognize."
+        },
+        {
+            "author": "Pirog17000",
+            "title": "Pirog's Nodes for ComfyUI",
+            "reference": "https://github.com/Pirog17000/Pirogs-Nodes",
+            "files": [
+                "https://github.com/Pirog17000/Pirogs-Nodes"
+            ],
+            "install_type": "git-clone",
+            "description": "Pirog's Nodes - ComfyUI custom node pack providing enhanced sampling functionality"
+        },
+        {
+            "author": "vsaan212",
+            "title": "ComfyUI Text Split Node",
+            "reference": "https://github.com/vsaan212/Comfy-ui-textsplit",
+            "files": [
+                "https://github.com/vsaan212/Comfy-ui-textsplit"
+            ],
+            "install_type": "git-clone",
+            "description": "A custom ComfyUI node that splits text into multiple outputs for feeding complex multi-scene renders. This node allows you to dynamically control the number of splits and use custom separators."
+        },
+        {
+            "author": "Lovzu",
+            "title": "KittenTTS Node for Voice Generation",
+            "reference": "https://github.com/Lovzu/ComfyUI-KittenTTS",
+            "files": [
+                "https://github.com/Lovzu/ComfyUI-KittenTTS"
+            ],
+            "install_type": "git-clone",
+            "description": "Ultra-lightweight text-to-speech model with just 15 million parameters"
+        },
+        {
             "author": "drozbay",
             "title": "ComfyUI-WanVaceAdvanced",
             "reference": "https://github.com/drozbay/ComfyUI-WanVaceAdvanced",
@@ -616,86 +687,6 @@
             ],
             "install_type": "git-clone",
             "description": "A custom node for ComfyUI that integrates ByteDance Volcano Engine's video generation AI model, supporting both text-to-video and image-to-video generation."
-        },
-        {
-            "author": "AlfredClark",
-            "title": "ComfyUI-ModelSpec",
-            "reference": "https://github.com/AlfredClark/ComfyUI-ModelSpec",
-            "files": [
-                "https://github.com/AlfredClark/ComfyUI-ModelSpec"
-            ],
-            "install_type": "git-clone",
-            "description": "ComfyUI model metadata editing nodes."
-        },
-        {
-            "author": "rainlizard",
-            "title": "Whirlpool Upscaler",
-            "reference": "https://github.com/rainlizard/ComfyUI-WhirlpoolUpscaler",
-            "files": [
-                "https://github.com/rainlizard/ComfyUI-WhirlpoolUpscaler"
-            ],
-            "install_type": "git-clone",
-            "description": "This is a modified implementation of impact-pack's iterative upscaler. It leans in on the idea that giving too much attention to computation at high resolutions isn't a good idea."
-        },
-        {
-            "author": "Android zhang",
-            "title": "ComfyUI-MoGe2",
-            "reference": "https://github.com/zade23/Comfyui-MoGe2",
-            "files": [
-                "https://github.com/zade23/Comfyui-MoGe2"
-            ],
-            "install_type": "git-clone",
-            "description": "Runs the MoGe2 model on the input image. \n v1: Ruicheng/moge-vitl \n v2: Ruicheng/moge-2-vitl-normal"
-        },
-        {
-            "author": "mcDandy",
-            "title": "More Math",
-            "reference": "https://github.com/mcDandy/more_math",
-            "files": [
-                "https://github.com/mcDandy/more_math"
-            ],
-            "install_type": "git-clone",
-            "description": "Adds math nodes for numbers and types which do not need it."
-        },
-        {
-            "author": "ebrinz",
-            "title": "ComfyUI-MusicGen-HF",
-            "reference": "https://github.com/ebrinz/ComfyUI-MusicGen-HF",
-            "files": [
-                "https://github.com/ebrinz/ComfyUI-MusicGen-HF"
-            ],
-            "install_type": "git-clone",
-            "description": "A standalone ComfyUI custom node package for Facebook's MusicGen using Hugging Face Transformers. Generate high-quality music from text prompts with full support for CUDA, MPS (Apple Silicon), and CPU."
-        },
-        {
-            "author": "joosthel",
-            "title": "ComfyUI-CVOverlay",
-            "reference": "https://github.com/joosthel/ComfyUI-CVOverlay",
-            "files": [
-                "https://github.com/joosthel/ComfyUI-CVOverlay"
-            ],
-            "install_type": "git-clone",
-            "description": "TouchDesigner-style blob tracking and computer vision effects for ComfyUI. Simple nodes for bright spot detection, plexus connections, and technical aesthetics in video workflows."
-        },
-        {
-            "author": "kmlbdh",
-            "title": "ComfyUI_LocalLLMNodes",
-            "reference": "https://github.com/kmlbdh/ComfyUI_LocalLLMNodes",
-            "files": [
-                "https://github.com/kmlbdh/ComfyUI_LocalLLMNodes"
-            ],
-            "install_type": "git-clone",
-            "description": "A custom node pack for ComfyUI that allows you to run Large Language Models (LLMs) locally and use them for prompt generation and other text tasks directly within your ComfyUI workflows."
-        },
-        {
-            "author": "fcanfora",
-            "title": "comfyui-camera-tools",
-            "reference": "https://github.com/fcanfora/comfyui-camera-tools",
-            "files": [
-                "https://github.com/fcanfora/comfyui-camera-tools"
-            ],
-            "install_type": "git-clone",
-            "description": "NODES: Load Camera From File, Load 3D, Load 3D - Animation, Preview 3D, Preview 3D - Animation"
         }
     ]
 }
