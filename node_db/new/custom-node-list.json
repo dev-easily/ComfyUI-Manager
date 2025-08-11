@@ -1,6 +1,57 @@
 {
     "custom_nodes": [
         {
+            "author": "S4MUEL404",
+            "title": "ComfyUI S4Motion",
+            "id": "comfyui-s4motion",
+            "reference": "https://github.com/S4MUEL-404/ComfyUI-S4Motion",
+            "files": [
+                "https://github.com/S4MUEL-404/ComfyUI-S4Motion"
+            ],
+            "install_type": "git-clone",
+            "description": "A set of ComfyUI nodes for animating a foreground layer over a background, with unified timing and high-quality composition. It includes effectors for rotation, position, path-following position, scale, opacity, distortion, and masking, plus a core node that composes frames and exports APNG/WEBP and a frame sequence."
+        },
+        {
+            "author": "squirrel765",
+            "title": "lorasubdirectory",
+            "reference": "https://github.com/andrewsthomasj/lorasubdirectory",
+            "files": [
+                "https://github.com/andrewsthomasj/lorasubdirectory"
+            ],
+            "install_type": "git-clone",
+            "description": "only show dropdown of loras ina a given subdirectory"
+        },
+        {
+            "author": "squirrel765",
+            "title": "comfyui-ea-nodes",
+            "reference": "https://github.com/ExoticArts/comfyui-ea-nodes",
+            "files": [
+                "https://github.com/ExoticArts/comfyui-ea-nodes"
+            ],
+            "install_type": "git-clone",
+            "description": "ExoticArts custom nodes for ComfyUI (EA Power LoRA, etc.)"
+        },
+        {
+            "author": "squirrel765",
+            "title": "ComfyUI-LLM-VLM-Node",
+            "reference": "https://github.com/squirrel765/ComfyUI-LLM-VLM-Node",
+            "files": [
+                "https://github.com/squirrel765/ComfyUI-LLM-VLM-Node"
+            ],
+            "install_type": "git-clone",
+            "description": "A unified ComfyUI node for both LLM (text-only) and VLM (image-to-text) generation using GGUF models.."
+        },
+        {
+            "author": "boricuapab",
+            "title": "ComfyUI-Bori-JsonSetGetConverter",
+            "reference": "https://github.com/boricuapab/ComfyUI-Bori-QwenImageResolutions",
+            "files": [
+                "https://github.com/boricuapab/ComfyUI-Bori-QwenImageResolutions" 
+            ],
+            "install_type": "git-clone",
+            "description": "This is a custom node for ComfyUI that provides the user with a dropdown which contains the recommended resolutions for the Qwen Image Model."
+        },
+        {
             "author": "eric183",
             "title": "ComfyUI-Only",
             "id": "comfyui-only",
@@ -637,56 +688,6 @@
             ],
             "install_type": "git-clone",
             "description": "A simple but powerful custom node for ComfyUI that patches LoRA models by adding dummy adaLN_modulation_1 weights. This solves compatibility errors when using LoRAs with newer model architectures that expect these keys to be present in the final_layer."
-        },
-        {
-            "author": "YaserJaradeh",
-            "title": "Yaser-nodes for ComfyUI",
-            "reference": "https://github.com/YaserJaradeh/comfyui-yaser-nodes",
-            "files": [
-                "https://github.com/YaserJaradeh/comfyui-yaser-nodes"
-            ],
-            "install_type": "git-clone",
-            "description": "A collection of custom nodes for ComfyUI that provide dynamic input selection and intelligent upscaling functionality."
-        },
-        {
-            "author": "gvfarns",
-            "title": "comfyui_gvf",
-            "reference": "https://github.com/gvfarns/comfyui_gvf",
-            "files": [
-                "https://github.com/gvfarns/comfyui_gvf"
-            ],
-            "install_type": "git-clone",
-            "description": "ComfyUI custom convenience nodes: Cropping images to a given aspect ratio, Cropping images to a max/min aspect ratio, If/else logic with provided float (rather than using a float node)"
-        },
-        {
-            "author": "mikeshuangyan",
-            "title": "ComfyUI_MqUtils",
-            "reference": "https://github.com/mikeshuangyan/ComfyUI_MqUtils",
-            "files": [
-                "https://github.com/mikeshuangyan/ComfyUI_MqUtils"
-            ],
-            "install_type": "git-clone",
-            "description": "MQ util nodes for ComfyUI"
-        },
-        {
-            "author": "Yuan-ManX",
-            "title": "ComfyUI-SkyworkUniPic",
-            "reference": "https://github.com/Yuan-ManX/ComfyUI-SkyworkUniPic",
-            "files": [
-                "https://github.com/Yuan-ManX/ComfyUI-SkyworkUniPic"
-            ],
-            "install_type": "git-clone",
-            "description": "ComfyUI-SkyworkUniPic is now available in ComfyUI, Skywork-UniPic is a unified autoregressive multimodal model with 1.5 billion parameters that natively integrates image understanding, text-to-image generation, and image editing capabilities within a single architecture."
-        },
-        {
-            "author": "zl9739379",
-            "title": "ComfyUI-ArkVideoGenerate",
-            "reference": "https://github.com/zl9739379/ComfyUI-ArkVideoGenerate",
-            "files": [
-                "https://github.com/zl9739379/ComfyUI-ArkVideoGenerate"
-            ],
-            "install_type": "git-clone",
-            "description": "A custom node for ComfyUI that integrates ByteDance Volcano Engine's video generation AI model, supporting both text-to-video and image-to-video generation."
         }
     ]
 }

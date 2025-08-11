@@ -3778,6 +3778,7 @@
             "ImageScaleDownBy",
             "ImageToMultipleOf",
             "KikoFilmGrain",
+            "KikoPurgeVRAM",
             "KikoSaveImage",
             "LoRAFolderBatch",
             "PlotParameters+",
@@ -4117,6 +4118,7 @@
             "Gemini Response",
             "Gemini Scenery",
             "Gemini Style",
+            "Gemini Subject",
             "Gemini Translate",
             "Gemini Vision"
         ],
@@ -4924,6 +4926,18 @@
         ],
         {
             "title_aux": "ComfyUI-Lumina-Next-SFT-DiffusersWrapper"
+        }
+    ],
+    "https://github.com/ExoticArts/comfyui-ea-nodes": [
+        [
+            "EA_FilenameCombine",
+            "EA_PowerLora",
+            "EA_PowerLora_CLIP",
+            "EA_PowerLora_WanVideo",
+            "EA_TrimFrames"
+        ],
+        {
+            "title_aux": "comfyui-ea-nodes"
         }
     ],
     "https://github.com/ExponentialML/ComfyUI_ModelScopeT2V": [
@@ -9644,8 +9658,31 @@
     ],
     "https://github.com/NakamuraShippo/ComfyUI-NS-Util": [
         [
+            "AlbedoMapGenerator",
             "NS-FlexPreset",
-            "NS-ToonFilter"
+            "NS-ManySliders",
+            "NS-PromptList",
+            "NS-ToonFilter",
+            "SimpleLLMAddDocument",
+            "SimpleLLMAddMemory",
+            "SimpleLLMAgent",
+            "SimpleLLMAgentToTool",
+            "SimpleLLMAgentWithRules",
+            "SimpleLLMChainOfThought",
+            "SimpleLLMConfigClaude",
+            "SimpleLLMConfigGemini",
+            "SimpleLLMConfigOllama",
+            "SimpleLLMConfigOpenAI",
+            "SimpleLLMDisplayText",
+            "SimpleLLMLoadWorkflow",
+            "SimpleLLMMemoryBank",
+            "SimpleLLMMergeText",
+            "SimpleLLMRAGQuery",
+            "SimpleLLMRunPrompt",
+            "SimpleLLMStringViewer",
+            "SimpleLLMTextInput",
+            "SimpleLLMTextOutput",
+            "SimpleLLMVectorStore"
         ],
         {
             "title_aux": "ComfyUI-NS-Util"
@@ -10865,6 +10902,22 @@
         ],
         {
             "title_aux": "comfyui_io_helpers"
+        }
+    ],
+    "https://github.com/S4MUEL-404/ComfyUI-S4Motion": [
+        [
+            "\ud83d\udc80Motion Config",
+            "\ud83d\udc80Motion Distortion",
+            "\ud83d\udc80Motion Mask",
+            "\ud83d\udc80Motion Opacity",
+            "\ud83d\udc80Motion Position",
+            "\ud83d\udc80Motion Position On Path",
+            "\ud83d\udc80Motion Rotation",
+            "\ud83d\udc80Motion Scale",
+            "\ud83d\udc80Motion Shake"
+        ],
+        {
+            "title_aux": "ComfyUI S4Motion"
         }
     ],
     "https://github.com/S4MUEL-404/ComfyUI-S4Tool-Image": [
@@ -12716,6 +12769,7 @@
     "https://github.com/Starnodes2024/ComfyUI_StarBetaNodes": [
         [
             "StarFrameFromVideo",
+            "StarIconExporter",
             "StarImageLoader1by1",
             "StarRandomImageLoader",
             "StarSavePanoramaJPEG"
@@ -12744,9 +12798,12 @@
             "StarDivisibleDimension",
             "StarEasyTextStorage",
             "StarFiveWildcards",
+            "StarFrameFromVideo",
             "StarGridCaptionsBatcher",
             "StarGridComposer",
             "StarGridImageBatcher",
+            "StarIconExporter",
+            "StarImageLoader1by1",
             "StarImageSwitch",
             "StarImageSwitch2",
             "StarInfiniteYouAdvancedPatchMaker",
@@ -12761,6 +12818,8 @@
             "StarPSDSaver",
             "StarPSDSaver2",
             "StarPaletteExtractor",
+            "StarRandomImageLoader",
+            "StarSavePanoramaJPEG",
             "StarSaveSamplerSettings",
             "StarTextFilter",
             "StarTextInput",
@@ -15862,6 +15921,8 @@
         [
             "APIFluxKontextEnhancer",
             "AnnotationDataNode",
+            "LRPGCanvas",
+            "LRPGCanvasTool",
             "OllamaFluxKontextEnhancerV2",
             "TextGenWebUIFluxKontextEnhancer",
             "VisualPromptEditor"
@@ -16648,6 +16709,15 @@
             "title_aux": "CLIP Directional Prompt Attention"
         }
     ],
+    "https://github.com/andrewsthomasj/lorasubdirectory": [
+        [
+            "LoraModelOnlySubdirectory",
+            "LoraSubdirectory"
+        ],
+        {
+            "title_aux": "lorasubdirectory"
+        }
+    ],
     "https://github.com/andygill/comfyui-sunflower-nodes": [
         [
             "DepthViewToIsometric",
@@ -17407,6 +17477,8 @@
         [
             "CustomCropArea",
             "CustomRefineOption",
+            "NAGParamtersSetting",
+            "RefineTest",
             "RegionalBatchPrompt",
             "SuperUltimateVACEUpscale",
             "VACEControlImageCombine",
@@ -18194,6 +18266,14 @@
             "title_aux": "ComfyUI-Bori-JsonSetGetConverter"
         }
     ],
+    "https://github.com/boricuapab/ComfyUI-Bori-QwenImageResolutions": [
+        [
+            "Bori Qwen Image Resolution"
+        ],
+        {
+            "title_aux": "ComfyUI-Bori-JsonSetGetConverter"
+        }
+    ],
     "https://github.com/bradsec/ComfyUI_ResolutionSelector": [
         [
             "ResolutionSelector"
@@ -18927,8 +19007,11 @@
             "HYW_PanoInpaint_Scene",
             "HYW_PanoInpaint_Sky",
             "HYW_PanoramaValidator",
+            "HYW_PerspectiveToPanoramaMask",
+            "HYW_RuntimeFromStock",
             "HYW_SeamlessWrap360",
             "HYW_SettingsLoader",
+            "HYW_ShiftPanorama",
             "HYW_SkyMaskGenerator",
             "HYW_TextureBaker",
             "HYW_Thumbnailer",
@@ -21692,6 +21775,7 @@
     ],
     "https://github.com/da2el-ai/D2-nodes-ComfyUI": [
         [
+            "D2 Any Delivery",
             "D2 Checkpoint Loader",
             "D2 Controlnet Loader",
             "D2 Cut By Mask",
@@ -22291,7 +22375,8 @@
             "PixelArtDetectorConverter",
             "PixelArtDetectorSave",
             "PixelArtDetectorToImage",
-            "PixelArtLoadPalettes"
+            "PixelArtLoadPalettes",
+            "PixelArtPaletteGenerator"
         ],
         {
             "title_aux": "ComfyUI PixelArt Detector"
@@ -32103,7 +32188,8 @@
         [
             "DownloadAndLoadTransNetModel",
             "SelectVideo",
-            "TransNetV2_Run"
+            "TransNetV2_Run",
+            "ZipCompress"
         ],
         {
             "title_aux": "ComfyUI Video Segmentation Node"
@@ -33876,7 +33962,8 @@
             "MaskCompositePPM",
             "PPMSamplerSelect",
             "RenormCFGPost",
-            "RescaleCFGPost"
+            "RescaleCFGPost",
+            "SamplerGradientEstimation"
         ],
         {
             "title_aux": "ComfyUI-ppm"
@@ -36323,22 +36410,6 @@
             "title_aux": "smZNodes"
         }
     ],
-    "https://github.com/shingo1228/ComfyUI-SDXL-EmptyLatentImage": [
-        [
-            "SDXL Empty Latent Image"
-        ],
-        {
-            "title_aux": "ComfyUI-SDXL-EmptyLatentImage"
-        }
-    ],
-    "https://github.com/shingo1228/ComfyUI-send-eagle-slim": [
-        [
-            "Send Image to Eagle"
-        ],
-        {
-            "title_aux": "ComfyUI-send-Eagle(slim)"
-        }
-    ],
     "https://github.com/shinich39/comfyui-break-workflow": [
         [
             "BreakWorkflow"
@@ -37392,6 +37463,14 @@
         ],
         {
             "title_aux": "Latent Mirror node for ComfyUI"
+        }
+    ],
+    "https://github.com/squirrel765/ComfyUI-LLM-VLM-Node": [
+        [
+            "UnifiedGenerator|LP"
+        ],
+        {
+            "title_aux": "ComfyUI-LLM-VLM-Node"
         }
     ],
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale": [
