@@ -198,9 +198,11 @@
             "StringCoordinateToBBoxMask",
             "StringCoordinateToBBoxes",
             "TextCustomExtract",
-            "TextFormat",
+            "TextFilterComment",
+            "TextJoinByTextList",
             "TextJoinMulti",
-            "TextLoadLocal"
+            "TextLoadLocal",
+            "TextPrefixSuffix"
         ],
         {
             "title_aux": "ComfyUI-1hewNodes [WIP]"
@@ -2461,6 +2463,7 @@
         [
             "mb Barcode",
             "mb CLIP Text Encoder",
+            "mb Color Mask",
             "mb Data Type Converter",
             "mb Debug",
             "mb Demux",
@@ -2650,7 +2653,10 @@
     "https://github.com/PATATAJEC/ComfyUI-PatatajecNodes": [
         [
             "ColorMatchFalloff",
-            "PathTool"
+            "ColorPicker",
+            "PathTool",
+            "SequenceBlend",
+            "SequenceContentZoom"
         ],
         {
             "title_aux": "Patatajec-Nodes [WIP]"
@@ -3624,6 +3630,20 @@
             "title_aux": "ComfyUI_LLM_Are_You_Listening [WIP]"
         }
     ],
+    "https://github.com/Yuan-ManX/ComfyUI-Step1X-Edit": [
+        [
+            "GenerateEditedImage",
+            "LoadAEModel",
+            "LoadDITModel",
+            "LoadImagePath",
+            "LoadQwenVLModel",
+            "Prompt",
+            "SaveEditedImage"
+        ],
+        {
+            "title_aux": "ComfyUI-Step1X-Edit [NAME CONFLICT]"
+        }
+    ],
     "https://github.com/Yukinoshita-Yukinoe/ComfyUI-KontextOfficialNode": [
         [
             "KontextImageEditingOfficialAPI_Max",
@@ -4147,8 +4167,12 @@
             "MC Switch Image",
             "MC Switch Latent",
             "MC Switch Model",
+            "MC Switch Noise",
             "MC Switch Seed",
-            "MC Switch String"
+            "MC Switch String",
+            "MC Swtich Latent(Multi)",
+            "MC Swtich Sampler(Multi)",
+            "MC Swtich Sigmas(Multi)"
         ],
         {
             "title_aux": "ComfyUI_MoreComfy"
@@ -4330,9 +4354,11 @@
     "https://github.com/blepping/comfyui_dum_samplers": [
         [
             "BatchMergeSampler",
+            "ButcherTableauSampler",
             "CacheAwareEulerSampler",
             "CyclePaddingSampler",
             "HistorySampler",
+            "LetMeHelpYouSampler",
             "PingPongSampler",
             "RestlessScheduler",
             "SimilarityAncestralEulerSampler",
@@ -5473,6 +5499,18 @@
             "title_aux": "ComfyUI_BWiZ_Nodes [WIP]"
         }
     ],
+    "https://github.com/duckmartians/Duck_Nodes": [
+        [
+            "Duck_LoadExcelRow",
+            "Duck_LoadGoogleDocLine",
+            "Duck_LoadGoogleSheetOneRow",
+            "Duck_LoadWordLine",
+            "Duck_PromptLoader"
+        ],
+        {
+            "title_aux": "Duck_Nodes [UNSAFE]"
+        }
+    ],
     "https://github.com/eggsbenedicto/DiffusionRenderer-ComfyUI": [
         [
             "Cosmos1ForwardRenderer",
@@ -6132,6 +6170,18 @@
         ],
         {
             "title_aux": "ComfyUI AceNodes [UNSAFE]"
+        }
+    ],
+    "https://github.com/hben35096/ComfyUI-ToolBox": [
+        [
+            "AutoDLDownload",
+            "CreatePaths",
+            "FolderDeleter",
+            "FolderViewe",
+            "PathOutput"
+        ],
+        {
+            "title_aux": "hben35096/ComfyUI-ToolBox [NAME CONFLICT]"
         }
     ],
     "https://github.com/hdfhssg/ComfyUI_pxtool": [
@@ -7285,6 +7335,15 @@
         ],
         {
             "title_aux": "ComfyUI-MV-HECV"
+        }
+    ],
+    "https://github.com/locphan201/ComfyUI-Alternatives": [
+        [
+            "LoraApplier",
+            "LoraPreLoader"
+        ],
+        {
+            "title_aux": "ComfyUI-Alternatives"
         }
     ],
     "https://github.com/logtd/ComfyUI-Fluxtapoz": [
@@ -9533,8 +9592,7 @@
     "https://github.com/usrname0/ComfyUI-AllergicPack": [
         [
             "FolderFileCounter_Allergic",
-            "IncrementorPlus",
-            "WanVideoVACEContextManager"
+            "IncrementorPlus"
         ],
         {
             "title_aux": "ComfyUI-AllergicPack [WIP]"
@@ -9891,6 +9949,14 @@
         ],
         {
             "title_aux": "honey_nodes [WIP]"
+        }
+    ],
+    "https://github.com/xsai-collab/ComfyUI-CombineVideoAndSubtitle": [
+        [
+            "CombineVideosFromFolder"
+        ],
+        {
+            "title_aux": "ComfyUI-CombineVideoAndSubtitle"
         }
     ],
     "https://github.com/xzuyn/ComfyUI-xzuynodes": [
