@@ -2538,6 +2538,19 @@
             "title_aux": "ComfyUI Zonos TTS Node"
         }
     ],
+    "https://github.com/Baverne/comfyUI-TiledWan": [
+        [
+            "TiledWanImageStatistics",
+            "TiledWanImageToMask",
+            "TiledWanInpaintCropImproved",
+            "TiledWanInpaintStitchImproved",
+            "TiledWanMaskStatistics",
+            "TiledWanVideoVACEpipe"
+        ],
+        {
+            "title_aux": "comfyUI-TiledWan"
+        }
+    ],
     "https://github.com/Beinsezii/bsz-cui-extras": [
         [
             "BSZAbsoluteHires",
@@ -3758,6 +3771,17 @@
             "title_aux": "ComfyUI-FuncAsTexture-CoiiNode"
         }
     ],
+    "https://github.com/Comfy-Org/NIMnodes": [
+        [
+            "Get_HFToken",
+            "InstallNIMNode",
+            "LoadNIMNode",
+            "NIMFLUXNode"
+        ],
+        {
+            "title_aux": "NVIDIA FLUX NIM"
+        }
+    ],
     "https://github.com/ComfyAssets/ComfyUI-KikoStats": [
         [
             "ResourceMonitor"
@@ -4299,6 +4323,16 @@
             "title_aux": "ascii-art-comfyui"
         }
     ],
+    "https://github.com/DenRakEiw/Latent_Nodes": [
+        [
+            "LatentColorMatch",
+            "LatentColorMatchSimple",
+            "LatentImageAdjust"
+        ],
+        {
+            "title_aux": "ComfyUI Latent Color Tools"
+        }
+    ],
     "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes": [
         [],
         {
@@ -4665,10 +4699,15 @@
     "https://github.com/Duanyll/duanyll_nodepack": [
         [
             "AdvancedMorphology",
+            "BBoxCrop",
+            "BBoxImageStitcher",
             "CoverWordsWithRectangles",
             "CreateArkClient",
             "CreateBoundingBoxesMaskQwen",
+            "DrawBBox",
+            "DrawBBoxMask",
             "DrawBoundingBoxesQwen",
+            "ExpandBBoxByRatio",
             "FluxKontextTrue3DPE",
             "FluxTextLoraLoader",
             "HfCheckpointLoader",
@@ -4684,6 +4723,7 @@
             "ImageDifferenceCmap",
             "ImagePadToResolution",
             "InsightFaceSimilarity",
+            "ParseBBoxQwenVL",
             "PhotoDoddleConditioning",
             "SeedEditNode"
         ],
@@ -8569,7 +8609,7 @@
             "description": "This extension provides some nodes to support merge lora, adjust Lora Block Weight.",
             "nickname": "CBC",
             "title": "merge",
-            "title_aux": "Comfyui-Merge-LoRA"
+            "title_aux": "comfyui-merge"
         }
     ],
     "https://github.com/Loewen-Hob/rembg-comfyui-node-better": [
@@ -10368,6 +10408,7 @@
             "KSamplerMultiSeed",
             "KSamplerMultiSeedPlus",
             "LensSimulatedBloom",
+            "PreviewImageQueue",
             "PromptRandomizer",
             "StringCombine",
             "TestResetButton",
@@ -10610,6 +10651,14 @@
             "title_aux": "LatentGC Aggressive"
         }
     ],
+    "https://github.com/RainyN0077/ComfyUI-PromptSE": [
+        [
+            "PromptSE"
+        ],
+        {
+            "title_aux": "ComfyUI-PromptSE"
+        }
+    ],
     "https://github.com/RamonGuthrie/ComfyUI-RBG-ImageStitchPlus": [
         [
             "RBGImageStitchPlus",
@@ -10777,11 +10826,14 @@
         [
             "RizzAnything",
             "RizzBatchImageLoader",
+            "RizzBlur",
             "RizzClean",
+            "RizzCropAndScaleFromMask",
             "RizzDynamicPromptGenerator",
             "RizzLoadLatestImage",
             "RizzLoadLatestMesh",
             "RizzModelBatchLoader",
+            "RizzPasteAndUnscale",
             "RizzUpscaleImageBatch"
         ],
         {
@@ -13274,6 +13326,14 @@
         ],
         {
             "title_aux": "Face Processor for ComfyUI"
+        }
+    ],
+    "https://github.com/SykkoAtHome/ComfyUI_SykkoTools": [
+        [
+            "LoadFBXCamera"
+        ],
+        {
+            "title_aux": "Sykko Tools for ComfyUI"
         }
     ],
     "https://github.com/T-Ph525/ComfyUI-Underage-Filter": [
@@ -15973,6 +16033,7 @@
     ],
     "https://github.com/aiaiaikkk/kontext-super-prompt": [
         [
+            "CustomModelPromptGenerator",
             "KontextSuperPrompt",
             "LRPGCanvas",
             "OllamaServiceManager",
@@ -18744,10 +18805,6 @@
             "Data_preset_save",
             "Data_sampleData",
             "Data_select",
-            "DoubaoAPI",
-            "DoubaoConfig",
-            "DoubaoTextChat",
-            "DoubaoVisionChat",
             "IO_adjust_image",
             "IO_clear_cache",
             "IO_input_any",
@@ -18801,6 +18858,7 @@
             "Stack_condi",
             "Stack_latent",
             "Stack_pre_Mark",
+            "Stack_pre_Mark_easy",
             "Stack_sample_data",
             "Stack_text",
             "basicIn_Sampler",
@@ -18867,6 +18925,7 @@
             "excel_Prompter",
             "excel_column_diff",
             "excel_insert_image",
+            "excel_qwen_artistic",
             "excel_qwen_font",
             "excel_read",
             "excel_row_diff",
@@ -21260,6 +21319,7 @@
             "VideoTriangleCFGGuidance",
             "VoxelToMesh",
             "VoxelToMeshBasic",
+            "Wan22FunControlToVideo",
             "Wan22ImageToVideoLatent",
             "WanCameraEmbedding",
             "WanCameraImageToVideo",
@@ -23883,6 +23943,15 @@
             "title_aux": "ComfyUI-hvBlockswap"
         }
     ],
+    "https://github.com/flybirdxx/ComfyUI-SDMatte": [
+        [
+            "SDMatteApply",
+            "SDMatteModelLoader"
+        ],
+        {
+            "title_aux": "ComfyUI-SDMatte"
+        }
+    ],
     "https://github.com/flycarl/ComfyUI-Pixelate": [
         [
             "ComfyUIPixelate"
@@ -26229,6 +26298,14 @@
             "title_aux": "ComfyUI-WanResolutionSelector"
         }
     ],
+    "https://github.com/if-ai/ComfyUI-yt_dl": [
+        [
+            "YouTubeDownloader"
+        ],
+        {
+            "title_aux": "ComfyUI-yt_dl"
+        }
+    ],
     "https://github.com/if-ai/ComfyUI_IF_AI_LoadImages": [
         [
             "IF_LoadImagesS"
@@ -28145,6 +28222,15 @@
         ],
         {
             "title_aux": "ComfyUI Usability"
+        }
+    ],
+    "https://github.com/karas17/ComfyUI-Camera-Watermark": [
+        [
+            "CameraWatermarkNode",
+            "ImageLoaderWithEXIF"
+        ],
+        {
+            "title_aux": "ComfyUI Camera Watermark"
         }
     ],
     "https://github.com/karthikg-09/ComfyUI-Vton-Mask": [
@@ -30199,6 +30285,7 @@
             "Mecha Recipe List",
             "Mecha Regex Weights",
             "Mecha Serializer",
+            "Mecha Subtract Recipe List",
             "Model Mecha Recipe",
             "SD1-LDM Mecha Blocks Parameters",
             "SDXL-SGM Mecha Blocks Parameters",
@@ -32364,6 +32451,7 @@
             "FourFloats",
             "FunctionSelectAuto",
             "FunctionSwap",
+            "GzippedBase64ToImage",
             "ImageBrightness",
             "ImageColorTransferMira",
             "ImageContrast",
@@ -33210,6 +33298,14 @@
         ],
         {
             "title_aux": "ComfyUI OpenAI Prompter"
+        }
+    ],
+    "https://github.com/njlent/ComfyUI_wavelet-colorfix": [
+        [
+            "WaveletColorFix"
+        ],
+        {
+            "title_aux": "ComfyUI Wavelet Color Fix"
         }
     ],
     "https://github.com/nkchocoai/ComfyUI-DanbooruPromptQuiz": [
@@ -34985,6 +35081,9 @@
     ],
     "https://github.com/ranska/pixel_palette_art": [
         [
+            "ColorFormatterNode",
+            "ColorPreviewNode",
+            "CreateColorFromRGBNode",
             "GimpPaletteLoader",
             "PaletteFormatter",
             "PixelPaletteExtractor"
@@ -36532,6 +36631,14 @@
             "nickname": "comfyui-no-one-above-me",
             "title": "comfyui-no-one-above-me",
             "title_aux": "comfyui-no-one-above-me"
+        }
+    ],
+    "https://github.com/shinyakidoguchi301/comfyui-lora-tag-loader": [
+        [
+            "LoRA_TagLoader"
+        ],
+        {
+            "title_aux": "LoRA Tag Loader for ComfyUI"
         }
     ],
     "https://github.com/shobhitic/ComfyUI-PlusMinusTextClip": [
@@ -38116,6 +38223,14 @@
         ],
         {
             "title_aux": "ComfyUI_Curves"
+        }
+    ],
+    "https://github.com/teamalpha-ai/comfyui-image-transformer": [
+        [
+            "ImageTransformerResizeToMaxPixels"
+        ],
+        {
+            "title_aux": "ComfyUI-ImageTransformer"
         }
     ],
     "https://github.com/tercumantanumut/ComfyUI-Omini-Kontext": [
