@@ -1,6 +1,36 @@
 {
     "custom_nodes": [
         {
+            "author": "InfiniNode",
+            "title": "Comfyui-InfiniNode-Model-Suite [UNSAFE]",
+            "reference": "https://github.com/InfiniNode/Comfyui-InfiniNode-Model-Suite",
+            "files": [
+                "https://github.com/InfiniNode/Comfyui-InfiniNode-Model-Suite"
+            ],
+            "install_type": "git-clone",
+            "description": "Welcome to the InfiniNode Model Suite, a custom node pack for ComfyUI that transforms the process of manipulating generative AI models. Our suite is a direct implementation of the 'GUI-Based Key Converter Development Plan,' designed to remove technical barriers for advanced AI practitioners and integrate seamlessly with existing image generation pipelines.[w/This node pack contains a node that has a vulnerability allowing write to arbitrary file paths.]"
+        },
+        {
+            "author": "GuusF",
+            "title": "Comfyui_CrazyMaths [WIP]",
+            "reference": "https://github.com/GuusF/Comfyui_CrazyMaths",
+            "files": [
+                "https://github.com/GuusF/Comfyui_CrazyMaths"
+            ],
+            "install_type": "git-clone",
+            "description": "A custom nodepack with a bunch of nodes that helps you generate fun math paterns directly inside of comfyui for masking or other reasons.\nNOTE: The files in the repo are not organized."
+        },
+        {
+            "author": "KohakuBlueleaf",
+            "title": "hdm-ext [WIP]",
+            "reference": "https://github.com/KohakuBlueleaf/HDM-ext",
+            "files": [
+                "https://github.com/KohakuBlueleaf/HDM-ext"
+            ],
+            "install_type": "git-clone",
+            "description": "HDM(HomeDiffusionModel) Extension"
+        },
+        {
             "author": "flybirdxx",
             "title": "ComfyUI Sliding Window [WIP]",
             "reference": "https://github.com/PixWizardry/ComfyUI_Sliding_Window",
@@ -6244,16 +6274,6 @@
             ],
             "install_type": "git-clone",
             "description": "NODES: Zoom and Enhance Nodes, Text To String List, Choose String, Define Word, Lookup Word, Substitute Words, Dictionary to JSON, JSON file to Dictionary, JSON to Dictionary, Load Image And Info From Path, CubbyHack, Image to Solid Background"
-        },
-        {
-            "author": "hananbeer",
-            "title": "node_dev - ComfyUI Node Development Helper",
-            "reference": "https://github.com/hananbeer/node_dev",
-            "files": [
-                "https://github.com/hananbeer/node_dev"
-            ],
-            "install_type": "git-clone",
-            "description": "Browse to this endpoint to reload custom nodes for more streamlined development:\nhttp://127.0.0.1:8188/node_dev/reload/<module_name>"
         },
         {
             "author": "ChrisColeTech",
