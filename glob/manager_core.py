@@ -652,6 +652,12 @@ class UnifiedManager:
 
     def is_updatable(self, node_id):
         cur_ver = self.get_cnr_active_version(node_id)
+        
+        if 'latest_version' not in self.cnr_map[node_id]:
+            return False
+        if 'version' not in self.cnr_map[node_id]['latest_version']:
+            return False
+
         latest_ver = self.cnr_map[node_id]['latest_version']['version']
 
         if cur_ver and latest_ver:
