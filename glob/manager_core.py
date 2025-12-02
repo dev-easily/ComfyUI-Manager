@@ -43,7 +43,7 @@ import manager_downloader
 from node_package import InstalledNodePackage
 
 
-version_code = [3, 36]
+version_code = [3, 37, 2]
 version_str = f"V{version_code[0]}.{version_code[1]}" + (f'.{version_code[2]}' if len(version_code) > 2 else '')
 
 
@@ -1484,6 +1484,7 @@ class UnifiedManager:
                 return ManagedResult('skip')
             elif self.is_disabled(node_id):
                 return self.unified_enable(node_id)
+
             else:
                 version_spec = self.resolve_unspecified_version(node_id)
 
@@ -2547,6 +2548,7 @@ def update_to_stable_comfyui(repo_path):
         else:
             logging.info(f"[ComfyUI-Manager] Updating ComfyUI: {current_tag} -> {latest_tag}")
             repo.git.checkout(latest_tag)
+            execute_install_script("ComfyUI", repo_path, instant_execution=False, no_deps=False)
             return 'updated', latest_tag
     except:
         traceback.print_exc()
@@ -2678,9 +2680,13 @@ def check_state_of_git_node_pack_single(item, do_fetch=False, do_update_check=Tr
 
 
 def get_installed_pip_packages():
-    # extract pip package infos
-    cmd = manager_util.make_pip_cmd(['freeze'])
-    pips = subprocess.check_output(cmd, text=True).split('\n')
+    try:
+        # extract pip package infos
+        cmd = manager_util.make_pip_cmd(['freeze'])
+        pips = subprocess.check_output(cmd, text=True).split('\n')
+    except Exception as e:
+        logging.warning("[ComfyUI-Manager] Could not enumerate pip packages for snapshot: %s", e)
+        return {}
 
     res = {}
     for x in pips:

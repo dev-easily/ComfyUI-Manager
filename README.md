@@ -19,6 +19,8 @@ Usage:
 
 To install ComfyUI-Manager in addition to an existing installation of ComfyUI, you can follow the following steps:
 
+1. Go to `ComfyUI/custom_nodes` dir in terminal (cmd)
+2. `git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager`
 1. goto `ComfyUI/custom_nodes` dir in terminal(cmd)
 2. `git clone --depth=1 https://github.com/dev-easily/ComfyUI-Manager`
 3. Restart ComfyUI
@@ -49,7 +51,7 @@ pip install comfy-cli
 comfy install
 ```
 
-Linux/OSX:
+Linux/macOS:
 ```commandline
 python -m venv venv
 . venv/bin/activate
@@ -59,7 +61,7 @@ comfy install
 * See also: https://github.com/Comfy-Org/comfy-cli
 
 
-### Installation[method4] (Installation for linux+venv: ComfyUI + ComfyUI-Manager)
+### Installation[method4] (Installation for Linux+venv: ComfyUI + ComfyUI-Manager)
 
 To install ComfyUI with ComfyUI-Manager on Linux using a venv environment, you can follow these steps:
 * **prerequisite: python-is-python3, python3-venv, git**
@@ -176,7 +178,7 @@ The following settings are applied based on the section marked as `is_default`.
 ![model-install-dialog](https://raw.githubusercontent.com/ltdrdata/ComfyUI-extension-tutorials/Main/ComfyUI-Manager/images/snapshot.jpg)
 
 
-## cm-cli: command line tools for power user
+## cm-cli: command line tools for power users
 * A tool is provided that allows you to use the features of ComfyUI-Manager without running ComfyUI.
 * For more details, please refer to the [cm-cli documentation](docs/en/cm-cli.md).
 
@@ -222,7 +224,7 @@ The following settings are applied based on the section marked as `is_default`.
   * `<current timestamp>` Ensure that the timestamp is always unique.
     * "components" should have the same structure as the content of the file stored in `<USER_DIRECTORY>/default/ComfyUI-Manager/components`.
       * `<component name>`: The name should be in the format `<prefix>::<node name>`.
-        * `<compnent nodeata>`: In the nodedata of the group node.
+        * `<component node data>`: In the node data of the group node.
           * `<version>`: Only two formats are allowed: `major.minor.patch` or `major.minor`. (e.g. `1.0`, `2.2.1`)
           * `<datetime>`: Saved time
           * `<packname>`: If the packname is not empty, the category becomes packname/workflow, and it is saved in the <packname>.pack file in `<USER_DIRECTORY>/default/ComfyUI-Manager/components`.
@@ -240,7 +242,7 @@ The following settings are applied based on the section marked as `is_default`.
 * Dragging and dropping or pasting a single component will add a node. However, when adding multiple components, nodes will not be added.
 
 
-## Support of missing nodes installation
+## Support for installing missing nodes
 
 ![missing-menu](https://raw.githubusercontent.com/ltdrdata/ComfyUI-extension-tutorials/Main/ComfyUI-Manager/images/missing-menu.jpg)
 
@@ -279,10 +281,10 @@ The following settings are applied based on the section marked as `is_default`.
 * Logging to file feature
   * This feature is enabled by default and can be disabled by setting `file_logging = False` in the `config.ini`.
 
-* Fix node(recreate): When right-clicking on a node and selecting `Fix node (recreate)`, you can recreate the node. The widget's values are reset, while the connections maintain those with the same names.
+* Fix node (recreate): When right-clicking on a node and selecting `Fix node (recreate)`, you can recreate the node. The widget's values are reset, while the connections maintain those with the same names.
   * It is used to correct errors in nodes of old workflows created before, which are incompatible with the version changes of custom nodes.
 
-* Double-Click Node Title: You can set the double click behavior of nodes in the ComfyUI-Manager menu.
+* Double-Click Node Title: You can set the double-click behavior of nodes in the ComfyUI-Manager menu.
   * `Copy All Connections`, `Copy Input Connections`: Double-clicking a node copies the connections of the nearest node.
     * This action targets the nearest node within a straight-line distance of 1000 pixels from the center of the node.
     * In the case of `Copy All Connections`, it duplicates existing outputs, but since it does not allow duplicate connections, the existing output connections of the original node are disconnected.
@@ -348,7 +350,7 @@ When you run the `scan.sh` script:
 
 * It updates the `github-stats.json`.
   * This uses the GitHub API, so set your token with `export GITHUB_TOKEN=your_token_here` to avoid quickly reaching the rate limit and malfunctioning.
-  * To skip this step, add the `--skip-update-stat` option.
+  * To skip this step, add the `--skip-stat-update` option.
 
 * The `--skip-all` option applies both `--skip-update` and `--skip-stat-update`.
 
@@ -356,9 +358,9 @@ When you run the `scan.sh` script:
 ## Troubleshooting
 * If your `git.exe` is installed in a specific location other than system git, please install ComfyUI-Manager and run ComfyUI. Then, specify the path including the file name in `git_exe = ` in the `<USER_DIRECTORY>/default/ComfyUI-Manager/config.ini` file that is generated.
 * If updating ComfyUI-Manager itself fails, please go to the **ComfyUI-Manager** directory and execute the command `git update-ref refs/remotes/origin/main a361cc1 && git fetch --all && git pull`.
-* If you encounter the error message `Overlapped Object has pending operation at deallocation on Comfyui Manager load` under Windows
+* If you encounter the error message `Overlapped Object has pending operation at deallocation on ComfyUI Manager load` under Windows
   * Edit `config.ini` file: add `windows_selector_event_loop_policy = True`
-* if `SSL: CERTIFICATE_VERIFY_FAILED` error is occured.
+* If the `SSL: CERTIFICATE_VERIFY_FAILED` error occurs.
   * Edit `config.ini` file: add `bypass_ssl = True`
 
 
