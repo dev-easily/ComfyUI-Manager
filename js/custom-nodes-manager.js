@@ -1436,7 +1436,11 @@ export class CustomNodesManager {
             });
 		}
 		else {
-			show_message('Failed to fetch versions from ComfyRegistry.');
+			show_message('Failed to fetch versions from ComfyRegistry, trying to install the latest version.');
+            versions.push('latest');
+            this.showVersionSelectorDialog(versions, (selected_version) => {
+                this.installNodes([hash], btn, title, selected_version);
+            });
 		}
 	}
 
